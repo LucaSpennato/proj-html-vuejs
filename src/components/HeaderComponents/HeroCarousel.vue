@@ -1,7 +1,8 @@
 <template>
   <section class="carousel-section container-fluid p-0">
     <HeaderNav/>
-    <div class="carousel flex-center  text-center">
+    <div class="carousel flex-center  text-center"
+    @mouseover="heroAutoPlayStop()" @mouseleave="heroAutoplayStart()">
       <div class="container-small" 
         v-for="(infos, index) in carouselElements" :key="index" 
         v-show="currentActive === index">
@@ -54,13 +55,37 @@ export default {
         let word = element.split(" ");
         return word[1]
       },
+
+      nextSlide: function(){
+        if(this.currentActive === this.carouselElements.length -1){
+              this.currentActive = 0;
+            }else{
+              this.currentActive++;
+            }
+      },
+
+      heroAutoplayStart: function(){
+        this.isHeroOn = setInterval(() => {
+            this.nextSlide();
+          },2000)
+      },
+
+      heroAutoPlayStop: function(){
+        clearInterval(this.isHeroOn);
+        this.isHeroOn = null;
+      },
+
       changeOnThumbClick: function(index){
         this.currentActive = index;
       },
     },
+    created(){
+      this.heroAutoplayStart();
+    },
     data: function(){
       return{
         currentActive: 1,
+        isHeroOn: null,
         carouselElements:[
           {
             title: 'example 1',
