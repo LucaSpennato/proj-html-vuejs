@@ -5,8 +5,13 @@
       <div class="container-small" 
         v-for="(infos, index) in carouselElements" :key="index" 
         v-show="currentActive === index">
-          <div class="display-1 fw-bold mb-4">
-            {{ infos.title }}
+          <div class="title display-1 fw-bold mb-4">
+           <span>
+             {{ splitFirstTitleWord(infos.title)}}
+           </span>
+           <span>
+             {{ splitSecondTitleWord(infos.title) }}
+           </span>
           </div>
             <div class="decription fs-4">
               {{ infos.description }}
@@ -41,11 +46,13 @@ export default {
         HeaderNav,
     },
     methods: {
-      simpleTitlePath: function(){
-        return this.carouselElements[this.currentActive].title;
+      splitFirstTitleWord(element){
+        let word = element.split(" ");
+        return word[0]
       },
-      simpleTitleDescription: function(){
-        return this.carouselElements[this.currentActive].description;
+      splitSecondTitleWord(element){
+        let word = element.split(" ");
+        return word[1]
       },
       changeOnThumbClick: function(index){
         this.currentActive = index;
@@ -56,7 +63,7 @@ export default {
         currentActive: 1,
         carouselElements:[
           {
-            title: 'example',
+            title: 'example 1',
             description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ',
             linkGetInTouch:{
               url: '#',
@@ -80,7 +87,7 @@ export default {
             }
           },
           {
-            title: 'example3',
+            title: 'example 3',
             description: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.',
             linkGetInTouch:{
               url: '#',
@@ -107,13 +114,29 @@ export default {
                         // carousel placeholder, the og one file is corrupted
                         url('https://static.vecteezy.com/system/resources/previews/006/304/593/original/abstract-white-and-light-grey-geometric-square-overlapped-pattern-on-background-with-shadow-modern-silver-color-cube-shape-with-copy-space-simple-and-minimal-banner-design-eps10-vector.jpg');
       background-position: center;
-      .carousel{
-        height: 80%;
+
+        .carousel{
+          height: 80%;
+          
+          .title{
+            text-transform: capitalize;
+
+            span:last-child{
+              color: $CcBluelagoon;
+              padding: 0 1.2rem;
+              background-color: rgba($CcFountainBlue, .3);
+            }
+          }
+
+          .decription{
+            color: darkgray;
+          }
+
+          ul li a{
+            color: black;
+          }
       }
 
-      .decription{
-        color: darkgray;
-      }
 
       .thumb-wrapper{
         position: absolute;
