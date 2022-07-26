@@ -6,12 +6,12 @@
         v-for="(infos, index) in carouselElements" :key="index" 
         v-show="currentActive === index">
           <div class="title display-1 fw-bold mb-4">
-           <span>
-             {{ splitFirstTitleWord(infos.title)}}
-           </span>
-           <span>
-             {{ splitSecondTitleWord(infos.title) }}
-           </span>
+            <span>
+              {{ splitFirstTitleWord(infos.title)}}
+            </span>
+            <span>
+              {{ splitSecondTitleWord(infos.title) }}
+            </span>
           </div>
             <div class="decription fs-4">
               {{ infos.description }}

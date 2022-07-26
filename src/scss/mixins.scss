@@ -1,0 +1,11 @@
+@mixin reset-list{
+    list-style: none;
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+
+@mixin activeElement{
+    background-color: $CcBluelagoon !important;
+    color: white !important;
+}
