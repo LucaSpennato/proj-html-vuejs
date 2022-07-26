@@ -1,5 +1,4 @@
 <template>
-    <section>
         <nav class="container-fluid flex-center">
             <div class="row container-medium">
                 <div class="col-2 flex-center">
@@ -17,7 +16,6 @@
                 </div>
             </div>
         </nav>
-    </section>
 </template>
 
 <script>
