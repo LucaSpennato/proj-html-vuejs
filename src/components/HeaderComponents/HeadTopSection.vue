@@ -1,6 +1,6 @@
 <template>
     <section id="headTopSection">
-        <div class="container flex-center p-2">
+        <div class="container flex-center p-3">
             <div class="row container-medium flex-between">
                 <div class="col-12">
                     <ul class="list">
@@ -37,7 +37,7 @@ export default {
             {
                 icon: 'clock',
                 url: '#',
-                text: 'Open Hours: Mon - Sat - 9:00 - 18:00',
+                text: 'open hours: mon - sat - 9:00 - 18:00',
             },
             {
                 icon: 'telephone',
@@ -87,8 +87,14 @@ export default {
             padding: 0;
             margin: 0;
 
+            li{
+                padding: 0 .6rem;
+                font-size: .9rem;
+            }
+
             li:first-child{
                 flex-grow: 1;
+                text-transform: capitalize;
             }
             li a{
                 text-decoration: none; 
