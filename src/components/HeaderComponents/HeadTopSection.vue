@@ -5,7 +5,8 @@
                 <div class="col-12">
                     <ul class="list">
                        <li v-for="(info, index) in  companySocialInfo" :key="index">
-                            <a :href="info.url">
+                            <a  @click.prevent 
+                                :href="info.url">
                                 <i :class="iconPath(info, index)"></i>
                                 {{ info.text }}</a>
                        </li>
