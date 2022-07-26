@@ -4,14 +4,19 @@
     <div class="carousel flex-center  text-center">
       <div class="container-small">
         <div class="display-1 fw-bold mb-4">
-        ready team
+          {{ carouselElements[currentActive].title }}
         </div>
           <h5>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quas harum et, facilis obcaecati tempore aut facere, quis reiciendis inventore molestias exercitationem sed asperiores dolorum numquam fugit assumenda. Aliquam, sequi?
+            {{ carouselElements[currentActive].description }}
           </h5>
         </div>
       </div>
-      <div class="lateral-thumb">
+      <div class="thumb-wrapper">
+        <div class="lateral-thumb my-2"
+        :class="{'active' : currentActive === index}" 
+          v-for="(thumb, index) in carouselElements" :key="index">
+            
+        </div>
       </div>
   </section>
 </template>
@@ -26,6 +31,7 @@ export default {
     },
     data: function(){
       return{
+        currentActive: 1,
         carouselElements:[
           {
             title: 'example',
@@ -41,6 +47,18 @@ export default {
           },
           {
             title: 'ready team',
+            description: 'No matter what your company needs, we will be ready to assist you in the best possible way',
+            linkOne:{
+              url: '#',
+              text: 'get in touch',
+            },
+            linkTwo:{
+              url: '#',
+              text: 'read more',
+            }
+          },
+          {
+            title: 'example',
             description: 'No matter what your company needs, we will be ready to assist you in the best possible way',
             linkOne:{
               url: '#',
@@ -71,16 +89,23 @@ export default {
         height: 80%;
       };
 
-      .lateral-thumb::after{
-        content: '\00A0';
+      .thumb-wrapper{
         position: absolute;
+        right: .8rem;
+        top: 50%;
+
+      }
+
+      .lateral-thumb{
         height: 2.6rem;
         width: .7rem;
         border-radius: 20px;
         border: 2px solid $CcBluelagoon;
-        // background-color: red;
-        right: .8rem;
-        top: 50%;
+        
+
+        &::after{
+          content: '\00A0';
+        }
       };
 
     }
