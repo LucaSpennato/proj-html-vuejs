@@ -26,6 +26,7 @@ export default {
       height: 100vh;
       // background-image: url('https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg');
       background-image: url('../../assets/backgrounds/bg-parallax.png'), 
+                        // carousel placeholder, the og one file is corrupted
                         url('https://static.vecteezy.com/system/resources/previews/006/304/593/original/abstract-white-and-light-grey-geometric-square-overlapped-pattern-on-background-with-shadow-modern-silver-color-cube-shape-with-copy-space-simple-and-minimal-banner-design-eps10-vector.jpg');
       background-position: center;
       // background-color: blue;

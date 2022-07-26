@@ -3,7 +3,7 @@
         <div class="container-fluid flex-center p-3">
             <div class="row container-medium flex-between">
                 <div class="col-12">
-                    <ul class="list">
+                    <ul class="list-reset">
                        <li v-for="(info, index) in  companySocialInfo" :key="index">
                             <a  @click.prevent 
                                 :href="info.url">
@@ -83,10 +83,7 @@ export default {
 
         ul{
             display: flex;
-            justify-content: flex-start;
-            list-style: none;
-            padding: 0;
-            margin: 0;
+            justify-content: flex-start;;
 
             li{
                 padding: 0 .6rem;
@@ -98,7 +95,6 @@ export default {
                 text-transform: capitalize;
             }
             li a{
-                text-decoration: none; 
                 color: $CcPumice;
             }
         };
