@@ -1,10 +1,18 @@
 <template>
-  
+  <div>
+    <HeaderNav/>
+
+  </div>
 </template>
 
 <script>
-export default {
+import HeaderNav from './HeaderNav.vue';
 
+export default {
+    name: 'HeroCarousel',
+    components:{
+        HeaderNav,
+    }
 }
 </script>
 
