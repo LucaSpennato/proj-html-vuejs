@@ -3,17 +3,24 @@
     <HeaderNav/>
     <div class="carousel flex-center  text-center">
       <div class="container-small">
-        <div class="display-1 fw-bold mb-4">
-          {{ carouselElements[currentActive].title }}
+        <div class="display-1 fw-bold mb-4"
+        v-for="(infos, index) in carouselElements" :key="index" v-show="currentActive === index">
+          {{ infos.title }}
         </div>
-          <h5>
+          <div class="decription fs-4">
             {{ carouselElements[currentActive].description }}
-          </h5>
+          </div>
+        </div>
+        <div>
+          <a :href="carouselElements[currentActive].linkOne.url">
+            {{ carouselElements[currentActive].linkOne.text }}
+          </a>
         </div>
       </div>
       <div class="thumb-wrapper">
         <div class="lateral-thumb my-2"
         :class="{'active' : currentActive === index}" 
+        @click="changeOnThumbClick(index)"
           v-for="(thumb, index) in carouselElements" :key="index">
             
         </div>
@@ -29,20 +36,32 @@ export default {
     components:{
         HeaderNav,
     },
+
+    methods: {
+      simpleTitlePath: function(){
+        return this.carouselElements[this.currentActive].title;
+      },
+      simpleTitleDescription: function(){
+        return this.carouselElements[this.currentActive].description;
+      },
+      changeOnThumbClick: function(index){
+        this.currentActive = index;
+      },
+    },
     data: function(){
       return{
         currentActive: 1,
         carouselElements:[
           {
             title: 'example',
-            description: 'No matter what your company needs, we will be ready to assist you in the best possible way',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ',
             linkOne:{
               url: '#',
-              text: 'get in touch',
+              text: 'go to one',
             },
             linkTwo:{
               url: '#',
-              text: 'read more',
+              text: 'read more one',
             }
           },
           {
@@ -58,15 +77,15 @@ export default {
             }
           },
           {
-            title: 'example',
-            description: 'No matter what your company needs, we will be ready to assist you in the best possible way',
+            title: 'example3',
+            description: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.',
             linkOne:{
               url: '#',
-              text: 'get in touch',
+              text: 'go to three',
             },
             linkTwo:{
               url: '#',
-              text: 'read more',
+              text: 'read more three',
             }
           },
         ]
@@ -87,7 +106,11 @@ export default {
       background-position: center;
       .carousel{
         height: 80%;
-      };
+      }
+
+      .decription{
+        color: darkgray;
+      }
 
       .thumb-wrapper{
         position: absolute;
@@ -106,7 +129,7 @@ export default {
         &::after{
           content: '\00A0';
         }
-      };
+      }
 
     }
 
