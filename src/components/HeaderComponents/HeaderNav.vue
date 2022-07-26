@@ -9,7 +9,7 @@
                         <li class="mx-1">
                             <a @click.prevent="navClick(index)" 
                             class="btn px-4 py-2 fw-semibold" 
-                            :class="{'active' : link.active}"
+                            :class="{'activeGreenLink' : link.active}"
                             :href="link.url">{{ link.text }}</a>
                         </li>
                     </ul>
@@ -83,7 +83,7 @@ export default {
         ul li{
             text-transform: uppercase;
             a:hover{
-                @include activeElement;
+                @include activeElementGreen;
             }
         }
     }

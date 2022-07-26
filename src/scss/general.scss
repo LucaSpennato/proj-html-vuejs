@@ -1,5 +1,7 @@
 @import './variables.scss';
 @import './mixins.scss';
+
+
 .flex-center{
     display: flex;
     justify-content: center;
@@ -13,7 +15,6 @@
 
 .list-reset{
     @include reset-list-ul;
-    
     li{
         display: inline;
         a{
@@ -22,6 +23,6 @@
     }
 }
 
-.active{
-    @include activeElement;
+.activeGreenLink{
+    @include activeElementGreen;
 }

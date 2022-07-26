@@ -28,7 +28,7 @@
       </div>
       <div class="thumb-wrapper">
         <div class="lateral-thumb my-2"
-        :class="{'active' : currentActive === index}" 
+        :class="{'activeGreenLink' : currentActive === index}" 
         @click="changeOnThumbClick(index)"
           v-for="(thumb, index) in carouselElements" :key="index">
             
@@ -124,9 +124,7 @@ export default {
             text-transform: capitalize;
 
             span:last-child{
-              color: $CcBluelagoon;
-              padding: 0 1.2rem;
-              background-color: rgba($CcFountainBlue, .3);
+              @include companyStyledWord;
             }
           }
 
@@ -141,7 +139,7 @@ export default {
             margin: 0 .8rem; 
 
             &:hover{
-              @include activeElement;
+              @include activeElementGreen;
             }
           }
       }
