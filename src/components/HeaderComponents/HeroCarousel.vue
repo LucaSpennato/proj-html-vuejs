@@ -1,8 +1,8 @@
 <template>
-  <div>
+  <section class="container-fluid">
     <HeaderNav/>
 
-  </div>
+  </section>
 </template>
 
 <script>

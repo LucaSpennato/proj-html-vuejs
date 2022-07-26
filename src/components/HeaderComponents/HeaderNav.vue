@@ -1,21 +1,23 @@
 <template>
-    <nav class="container-fluid flex-center">
-        <div class="row container-medium">
-            <div class="col-2 flex-center">
-                <img class="w-75" :src="require('../../assets/logos/logo.png')" alt="">
+    <section>
+        <nav class="container-fluid flex-center">
+            <div class="row container-medium">
+                <div class="col-2 flex-center">
+                    <img class="w-75" :src="require('../../assets/logos/logo.png')" alt="">
+                </div>
+                <div class="col-10 text-end">
+                    <ul class="list-reset" v-for="(link, index) in navLinks" :key="index">
+                        <li class="mx-1">
+                            <a @click.prevent="navClick(index)" 
+                            class="btn px-4 py-2 fw-semibold" 
+                            :class="{'active' : link.active}"
+                            :href="link.url">{{ link.text }}</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div class="col-10 text-end">
-                <ul class="list-reset" v-for="(link, index) in navLinks" :key="index">
-                    <li class="mx-2">
-                        <a @click.prevent="navClick(index)" 
-                        class="btn px-4 fw-semibold" 
-                        :class="{'active' : link.active}"
-                        :href="link.url">{{ link.text }}</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+        </nav>
+    </section>
 </template>
 
 <script>
