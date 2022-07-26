@@ -2,19 +2,23 @@
   <section class="carousel-section container-fluid p-0">
     <HeaderNav/>
     <div class="carousel flex-center  text-center">
-      <div class="container-small">
-        <div class="display-1 fw-bold mb-4"
-        v-for="(infos, index) in carouselElements" :key="index" v-show="currentActive === index">
-          {{ infos.title }}
-        </div>
-          <div class="decription fs-4">
-            {{ carouselElements[currentActive].description }}
+      <div class="container-small" 
+        v-for="(infos, index) in carouselElements" :key="index" 
+        v-show="currentActive === index">
+          <div class="display-1 fw-bold mb-4">
+            {{ infos.title }}
           </div>
-        </div>
-        <div>
-          <a :href="carouselElements[currentActive].linkOne.url">
-            {{ carouselElements[currentActive].linkOne.text }}
-          </a>
+            <div class="decription fs-4">
+              {{ infos.description }}
+          </div>
+          <ul class="list-reset">
+            <li>
+              <a :href="infos.linkGetInTouch.url">{{ infos.linkGetInTouch.text }}</a>
+            </li>
+            <li>
+              <a :href="infos.linkReadMore.url">{{ infos.linkReadMore.text }}</a>
+            </li>
+          </ul>
         </div>
       </div>
       <div class="thumb-wrapper">
@@ -36,7 +40,6 @@ export default {
     components:{
         HeaderNav,
     },
-
     methods: {
       simpleTitlePath: function(){
         return this.carouselElements[this.currentActive].title;
@@ -55,11 +58,11 @@ export default {
           {
             title: 'example',
             description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ',
-            linkOne:{
+            linkGetInTouch:{
               url: '#',
               text: 'go to one',
             },
-            linkTwo:{
+            linkReadMore:{
               url: '#',
               text: 'read more one',
             }
@@ -67,11 +70,11 @@ export default {
           {
             title: 'ready team',
             description: 'No matter what your company needs, we will be ready to assist you in the best possible way',
-            linkOne:{
+            linkGetInTouch:{
               url: '#',
               text: 'get in touch',
             },
-            linkTwo:{
+            linkReadMore:{
               url: '#',
               text: 'read more',
             }
@@ -79,11 +82,11 @@ export default {
           {
             title: 'example3',
             description: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.',
-            linkOne:{
+            linkGetInTouch:{
               url: '#',
               text: 'go to three',
             },
-            linkTwo:{
+            linkReadMore:{
               url: '#',
               text: 'read more three',
             }
