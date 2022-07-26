@@ -1,6 +1,6 @@
 <template>
     <section id="headTopSection">
-        <div class="container flex-center p-3">
+        <div class="container-fluid flex-center p-3">
             <div class="row container-medium flex-between">
                 <div class="col-12">
                     <ul class="list">
