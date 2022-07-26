@@ -4,22 +4,11 @@
             <div class="row container-medium flex-between">
                 <div class="col-12">
                     <ul class="list">
-                        <li>
-                            <i class="bi bi-clock-fill"></i> 
-                            Open Hours: Mon - Sat - 9:00 - 18:00
-                        </li>
-                        <li>
-                            ciao
-                        </li>
-                        <li>
-                            ciao
-                        </li>
-                        <li>
-                            ciao
-                        </li>
-                        <li>
-                            ciao
-                        </li>
+                       <li v-for="(info, index) in  companySocialInfo" :key="index">
+                            <a :href="info.url">
+                                <i :class="iconPath(info, index)"></i>
+                                {{ info.text }}</a>
+                       </li>
                     </ul>
                     
                 </div>
@@ -32,12 +21,49 @@
 <script>
 export default {
     name: 'HeaderTopSection',
+    methods:{
+        iconPath: function(object, index){
+
+            if(index < 3){
+                return 'bi bi-' + object.icon + '-fill';
+            }else{
+                return 'bi bi-' + object.icon;
+            }
+        }
+    },
     data: function(){
         return{
            companySocialInfo:[
             {
-
-            }
+                icon: 'clock',
+                url: '#',
+                text: 'Open Hours: Mon - Sat - 9:00 - 18:00',
+            },
+            {
+                icon: 'telephone',
+                url: '#',
+                text: '+1(305) 1234-5678',
+            },
+            {
+                icon: 'envelope',
+                url: '#',
+                text: 'hello@example.com',
+            },
+            {
+                icon: 'facebook',
+                url: '#',
+                text: '',
+            },
+            {
+                icon: 'twitter',
+                url: '#',
+                text: '',
+            },
+            {
+                icon: 'linkedin',
+                url: '#',
+                text: '',
+            },
            ]
         }
     }
@@ -63,6 +89,10 @@ export default {
 
             li:first-child{
                 flex-grow: 1;
+            }
+            li a{
+                text-decoration: none; 
+                color: $CcPumice;
             }
         };
     };
