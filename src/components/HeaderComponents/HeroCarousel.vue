@@ -1,9 +1,9 @@
 <template>
   <section class="carousel-section container-fluid p-0">
     <HeaderNav/>
-    <div class="carousel flex-center  text-center"
-    @mouseover="heroAutoPlayStop()" @mouseleave="heroAutoplayStart()">
+    <div class="carousel flex-center  text-center">
       <div class="container-small" 
+        @mouseover="heroAutoPlayStop()" @mouseleave="heroAutoplayStart()"
         v-for="(infos, index) in carouselElements" :key="index" 
         v-show="currentActive === index">
           <div class="title display-1 fw-bold mb-4">
@@ -77,6 +77,10 @@ export default {
 
       changeOnThumbClick: function(index){
         this.currentActive = index;
+        this.heroAutoPlayStop();
+        setTimeout(() => {
+          this.heroAutoplayStart();
+        }, 5000);
       },
     },
     created(){
