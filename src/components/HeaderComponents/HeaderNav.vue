@@ -75,6 +75,7 @@ export default {
     @import '../../scss/variables.scss';
     @import '../../scss/general.scss';
     @import '../../scss/containers.scss';
+    @import '../../scss/mixins.scss';
 
     nav{
         padding: 2rem 0;
@@ -82,8 +83,7 @@ export default {
         ul li{
             text-transform: uppercase;
             a:hover{
-                background-color: $CcBluelagoon !important;
-                color: white !important;
+                @include activeElement;
             }
         }
     }

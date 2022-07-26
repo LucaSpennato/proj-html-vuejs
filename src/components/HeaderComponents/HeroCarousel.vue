@@ -13,15 +13,15 @@
               {{ splitSecondTitleWord(infos.title) }}
             </span>
           </div>
-            <div class="decription fs-4">
+            <div class="decription fs-4 mb-4">
               {{ infos.description }}
           </div>
           <ul class="list-reset">
             <li>
-              <a :href="infos.linkGetInTouch.url">{{ infos.linkGetInTouch.text }}</a>
+              <a class="btn" :href="infos.linkGetInTouch.url">{{ infos.linkGetInTouch.text }}</a>
             </li>
             <li>
-              <a :href="infos.linkReadMore.url">{{ infos.linkReadMore.text }}</a>
+              <a class="btn" :href="infos.linkReadMore.url">{{ infos.linkReadMore.text }}</a>
             </li>
           </ul>
         </div>
@@ -108,6 +108,8 @@ export default {
     @import '../../scss/variables.scss';
     @import '../../scss/general.scss';
     @import '../../scss/containers.scss';
+    @import '../../scss/mixins.scss';
+
     .carousel-section{
       height: 100vh;
       background-image: url('../../assets/backgrounds/bg-parallax.png'), 
@@ -133,7 +135,14 @@ export default {
           }
 
           ul li a{
-            color: black;
+            text-transform: uppercase;
+            color: $CcBluelagoon;
+            border: 2px solid $CcBluelagoon;
+            margin: 0 .8rem; 
+
+            &:hover{
+              @include activeElement;
+            }
           }
       }
 

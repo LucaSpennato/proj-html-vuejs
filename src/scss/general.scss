@@ -12,7 +12,7 @@
 }
 
 .list-reset{
-    @include reset-list;
+    @include reset-list-ul;
     
     li{
         display: inline;
