@@ -20,7 +20,26 @@
 export default {
     name: 'OurNumbersSection',
     data: function(){
-        
+       return{
+        companyResults:[
+            {
+                number: '128',
+                area: 'certifications',
+            },
+            {
+                number: '230',
+                area: 'employees',
+            },
+            {
+                number: '517',
+                area: 'customers',
+            },
+            {
+                number: '94',
+                area: 'countries served',
+            },
+        ]
+       }
     }
 }
 </script>
