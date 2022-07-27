@@ -3,7 +3,16 @@
     <div class="container">
         <div class="row col-10">
 
-            <LinksNav/>
+            <div v-for="(lists, index) in footerLinks" :key="index">
+                {{ lists.links }}
+                <!-- <div v-for="(text, index) in text.links" :key="index">
+
+                </div> -->
+            </div>
+            <LinksNav
+            v-for="(lists, index) in footerLinks" :key="index"
+            :links="lists.links"
+            />
         </div>
     </div>
 
@@ -22,11 +31,8 @@ export default {
         return{
             footerLinks:[
                 {
-                    about:[
-                        {
-                            url: '#',
-                            text: '',
-                        },
+                    title:'about',
+                    links:[
                         {
                             url: '#',
                             text: 'the company',
@@ -47,8 +53,15 @@ export default {
                             url: '#',
                             text: 'environment',
                         },
+                        {
+                            url: '#',
+                            text: 'technology',
+                        },
                     ],
-                    Services:[
+                },
+                {
+                    title:'services',
+                    links:[
                         {
                             url: '#',
                             text: 'audit & assurance',
@@ -74,7 +87,10 @@ export default {
                             text: 'regulatory risk',
                         },
                     ],
-                    Support:[
+                },
+                {
+                    title:'support',
+                    links:[
                         {
                             url: '#',
                             text: 'responsability',

@@ -1,6 +1,12 @@
 <template>
   <div>
-
+    <!-- {{ links.title }}
+    {{ links.links }} -->
+    <ul>
+        <li v-for="(link, index) in links" :key="index">
+            {{ link.text }}
+        </li>
+    </ul>
   </div>
 </template>
 
