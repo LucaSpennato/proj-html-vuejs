@@ -11,6 +11,15 @@
                         in Numbers
                     </h1>
                 </div>
+
+                <div class="row mt-5 justify-content-between">
+                    <div class="result col-3 p-0" 
+                    v-for="(result, index) in companyResults" :key="index">
+                        <h2>{{ result.number }}</h2>
+                        <h3>{{ result.area }}</h3>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>    
@@ -37,6 +46,26 @@ export default {
             {
                 number: '94',
                 area: 'countries served',
+            },
+        ],
+        technologies:[
+            {
+                logo: '4',
+            },
+            {
+                logo: '5',
+            },
+            {
+                logo: '1',
+            },
+            {
+                logo: '2',
+            },
+            {
+                logo: '3',
+            },
+            {
+                logo: '4',
             },
         ]
        }
@@ -65,6 +94,21 @@ export default {
                 color: $CcPumice;
             }
         }
+
+        .result{
+            h2{
+                color: $CcFountainBlue;
+            }
+            h3{
+                text-transform: capitalize;
+                color: $CcWhite;
+            }
+        }
+
+        .technologies{
+            background-color: $McShark;
+        }
+
     }
 
 </style>
