@@ -1,8 +1,8 @@
 <template>
   <section id="services" class="container-fluid">
     <div class="container flex-center">
-        <div class="container-medium">
-            <div class="row justify-content-between">
+        <div class="row col-10">
+            <div class="row justify-content-center">
                 <div class="infos col-8 px-4">
                     <h6 class="text-uppercase">
                         our business areas
@@ -18,11 +18,11 @@
                     <a class="text-uppercase btn activeGreenLink px-4 mb-4" @click.prevent href="#">see all</a>
                 </div>
             </div>
-            <div class="cards m-0">
+            <div class="row col-12 m-0 p-0 gap-3 justify-content-center">
                 <div
                 v-for="(card, index) in servicesInfos" :key="index" 
-                class="services-card rounded">
-                    <div class="card-body">
+                class="col-3 services-card rounded">
+                    <div>
                         <div class="d-flex justify-content-between">
                             <i :class="iconPath(card)"></i>
                             <a :href="card.url" @click.prevent>
@@ -112,10 +112,7 @@ export default {
         }
 
         .services-card{
-            display: inline-block;
-            width: calc((100% / 3) - 1.6rem);
-            padding: 2.5rem;
-            margin: .8rem;
+            padding: 1.7rem;
             background-color: $CcWhite;
 
             i{

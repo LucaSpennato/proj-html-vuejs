@@ -3,7 +3,7 @@
     <HeaderNav/>
     <div class="container">
       <div class="row carousel flex-center text-center">
-        <div class="col-8" 
+        <div class="col-7" 
         @mouseover="heroAutoPlayStop()" @mouseleave="heroAutoplayStart()"
         v-for="(infos, index) in carouselElements" :key="index" 
         v-show="currentActive === index">

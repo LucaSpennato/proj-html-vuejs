@@ -1,40 +1,38 @@
 <template>
-    <section id="action-projects" class="container-fluid">
-        <div class="container flex-center">
-            <div class="container-medium p-4">
-                <div class="row text-center">
+    <section id="action-projects" class="container-fluid flex-center">
+        <div class="container-medium p-4">
+            <div class="row text-center">
 
-                    <div class="col-12 infos">
-                        <h6 class="text-uppercase">
-                            we do more for everyone
-                        </h6>
-                        <h1 class="fw-bold py-4">
-                            actions &
-                            <span>projects</span>
-                        </h1>
-                    </div>
+                <div class="col-12 infos">
+                    <h6 class="text-uppercase">
+                        we do more for everyone
+                    </h6>
+                    <h1 class="fw-bold py-4">
+                        actions &
+                        <span>projects</span>
+                    </h1>
+                </div>
 
-                    <div class="col-12 mb-5">
-                        <nav>
-                            <ul class="list-reset" v-for="(link, index) in navLinks" :key="index">
-                                <li class="mx-1">
-                                    <a @click.prevent="navClick(index)" 
-                                    class="btn p-2" 
-                                    :class="{'active' : link.active}"
-                                    :href="link.url">{{ link.text }}</a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
+                <div class="col-12 mb-5">
+                    <nav>
+                        <ul class="list-reset" v-for="(link, index) in navLinks" :key="index">
+                            <li class="mx-1">
+                                <a @click.prevent="navClick(index)" 
+                                class="btn p-2" 
+                                :class="{'active' : link.active}"
+                                :href="link.url">{{ link.text }}</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
 
-                    <div class="col-12">
-                        <div class="card-projects"
-                        v-for="(card, index) in projectsInfos" :key="index">
-                            <img class="img-fluid rounded" 
-                            :src="imgPath(card)" 
-                            :alt="imgPath(card) + 'project image'">
-                            <p class="rounded">{{ card.text }}</p>
-                        </div>
+                <div class="col-12">
+                    <div class="card-projects"
+                    v-for="(card, index) in projectsInfos" :key="index">
+                        <img class="img-fluid rounded" 
+                        :src="imgPath(card)" 
+                        :alt="imgPath(card) + 'project image'">
+                        <p class="rounded">{{ card.text }}</p>
                     </div>
                 </div>
             </div>
