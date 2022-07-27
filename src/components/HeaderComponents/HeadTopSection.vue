@@ -72,9 +72,7 @@ export default {
 </script>
 
 <style lang="scss">
-    @import '../../scss/variables.scss';
-    @import '../../scss/general.scss';
-    @import '../../scss/containers.scss';
+    @import '../../scss/style.scss';
     @import '~bootstrap-icons/font/bootstrap-icons.css';
 
     #headTopSection{

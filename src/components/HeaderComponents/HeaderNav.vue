@@ -72,10 +72,7 @@ export default {
 </script>
 
 <style lang="scss">
-    @import '../../scss/variables.scss';
-    @import '../../scss/general.scss';
-    @import '../../scss/containers.scss';
-    @import '../../scss/mixins.scss';
+    @import '../../scss/style.scss';
 
     nav{
         padding: 2rem 0;
