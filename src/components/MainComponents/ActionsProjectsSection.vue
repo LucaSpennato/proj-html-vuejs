@@ -129,7 +129,7 @@ export default {
     @import '../../scss/style.scss';
 
     #action-projects{
-        margin-top: 6rem;
+        margin: 6rem 0;
         .infos{
             h1{
                 text-transform: capitalize;
