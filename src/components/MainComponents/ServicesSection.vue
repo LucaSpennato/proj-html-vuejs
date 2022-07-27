@@ -101,6 +101,7 @@ export default {
         }
         h6{
             color: $CcBluelagoon;
+            font-size: .8rem;
         }
         p{
             color: gray;
