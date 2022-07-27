@@ -30,3 +30,7 @@
 .company-styled-word{
     @include companyStyledWord;
 }
+
+.company-styled-word-bg{
+    @include companyStyledWordBg;
+}

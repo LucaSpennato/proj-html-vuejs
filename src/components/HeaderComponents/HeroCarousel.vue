@@ -159,10 +159,7 @@ export default {
           }
 
           ul li a{
-            text-transform: uppercase;
-            color: $CcBluelagoon;
-            border: 2px solid $CcBluelagoon;
-            margin: 0 .8rem; 
+            @include inactiveElementGreen;
 
             &:hover{
               @include activeElementGreen;

@@ -12,10 +12,22 @@
     background-color: $CcBluelagoon !important;
     color: white !important;
 }
+@mixin inactiveElementGreen{
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $CcBluelagoon;
+    border: 2px solid $CcBluelagoon;
+    margin: 0 .8rem; 
+}
 
 // This is the commonly used styled word in the page
 @mixin companyStyledWord{
     color: $CcBluelagoon;
+    padding: 0 1.2rem;
+    background-color: rgba($CcFountainBlue, .3);
+}
+
+@mixin companyStyledWordBg{
     padding: 0 1.2rem;
     background-color: rgba($CcFountainBlue, .3);
 }

@@ -73,7 +73,6 @@ export default {
 
 <style lang="scss">
     @import '../../scss/style.scss';
-    @import '~bootstrap-icons/font/bootstrap-icons.css';
 
     #headTopSection{
         background-color: $TopHeaderBg;

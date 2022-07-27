@@ -7,7 +7,7 @@
                     our business areas
                 </h6>
                 <h1 class="fw-bold py-4">
-                    Exellence in <span class="company-styled-word">Services</span>
+                    Exellence in <span>Services</span>
                 </h1>
                 <p>
                     We are leaders in providing consultancy with a set of cutting-edge technologies and a team of experienced and renowed professionals. These are some options that you can hire.
@@ -28,7 +28,7 @@
                             <i class="bi bi-arrow-right-short"></i>
                         </a>
                     </div>
-                    <h5 class="card-title text-capitalize py-3">{{ card.title }}</h5>
+                    <h5>{{ card.title }}</h5>
                     <p class="card-text">{{ card.text }}</p>
                 </div>
             </div>
@@ -96,7 +96,9 @@ export default {
     #services{
         background-color: $ServicesBg;
         padding: 8rem 0;
-
+        h1 span{
+            @include companyStyledWord;
+        }
         h6{
             color: $CcBluelagoon;
         }
@@ -104,12 +106,8 @@ export default {
             color: gray;
         }
 
-        .cards{
-            display: flex;
-            flex-wrap: wrap;
-        }
-
         .services-card{
+            display: inline-block;
             width: calc((100% / 3) - 1.6rem);
             padding: 2.5rem;
             margin: .8rem;
@@ -118,6 +116,11 @@ export default {
             i{
                 font-size: 2rem;
                 color: $CcBluelagoon;
+            }
+
+            h5{
+                text-transform: capitalize;
+                padding: 1.2rem 0;
             }
 
             a{
