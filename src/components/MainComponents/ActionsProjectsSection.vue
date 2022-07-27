@@ -2,6 +2,7 @@
     <section id="action-projects" class="container-fluid flex-center">
         <div class="container-medium p-4">
             <div class="row text-center">
+
                 <div class="col-12 infos">
                     <h6 class="text-uppercase">
                         we do more for everyone
@@ -11,6 +12,7 @@
                         <span>projects</span>
                     </h1>
                 </div>
+
                 <div class="col-12">
                     <nav>
                         <ul class="list-reset" v-for="(link, index) in navLinks" :key="index">
@@ -22,6 +24,13 @@
                             </li>
                         </ul>
                     </nav>
+                </div>
+
+                <div class="col-12">
+                    <div class="card-projects"
+                    v-for="(card, index) in projectsInfos" :key="index">
+                        {{ card.text }}
+                    </div>
                 </div>
             </div>
         </div>
@@ -39,9 +48,6 @@ export default {
             });
             this.navLinks[index].active = true;
         },
-        navHover: function(){
-
-        }
     },
     data: function(){
         return{
@@ -81,8 +87,34 @@ export default {
                 text: 'technology',
                 active: false,
             },
-        ] 
-        }
+        ],
+        projectsInfos:[
+                {
+                    img: '1',
+                    text: 'Academic professional program in social media',
+                },
+                {
+                    img: '2',
+                    text: 'President\'s speech at the annual meeting',
+                },
+                {
+                    img: '3',
+                    text: 'International business trip in Shangai',
+                },
+                {
+                    img: '4',
+                    text: 'Technology workshop with educational theme',
+                },
+                {
+                    img: '5',
+                    text: 'Donation of clothes and food to the partner NGO',
+                },
+                {
+                    img: '6',
+                    text: 'Confraternization of the procurement team',
+                },
+            ] 
+        }   
     }
 }
 </script>

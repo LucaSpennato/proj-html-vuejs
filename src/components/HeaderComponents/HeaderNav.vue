@@ -28,9 +28,6 @@ export default {
             });
             this.navLinks[index].active = true;
         },
-        navHover: function(){
-
-        }
     },
     data: function(){
         return{
