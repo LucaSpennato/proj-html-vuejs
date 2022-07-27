@@ -40,6 +40,7 @@
                     <i :class="iconPath(contact)"></i>
                     <span>{{ contact.text }}</span>
                 </div>
+                <a class="btn" href="#" @click.prevent>view map</a>
             </div>
         </div>
     </div>
@@ -51,7 +52,7 @@ export default {
     name: 'GetInTouch',
     methods:{
         iconPath: function(object){
-            return 'bi bi-' + object.icon;
+            return 'bi bi-' + object.icon + '-fill';
             
         }
     },
@@ -117,11 +118,38 @@ export default {
         }
 
         .right-side{
-            padding: 1rem;
+            padding: 1rem 1.5rem;
             h5{
                 font-weight: bold;
             }
+            div{
+                padding: .9rem 0;
+                color: $CcPumice;
+            }
+            .contact{
+                margin: 1rem 0;
+                i{
+                    @include companyStyledWord;
+                    padding: .7rem;
+                    border-radius: 50%;
+                }
+                span{
+                    color: $CcBluelagoon;
+                    margin-left: .5rem;
+                    text-transform: capitalize;
+                }
+
+                
+            }
+
+            a{
+                @include inactiveElementGreen;
+
+                &:hover{
+                @include activeElementGreen;
+            }
         }
     }
+}
 
 </style>

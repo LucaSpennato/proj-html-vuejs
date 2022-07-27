@@ -12,12 +12,13 @@
     background-color: $CcBluelagoon !important;
     color: white !important;
 }
+
 @mixin inactiveElementGreen{
     text-transform: uppercase;
     text-decoration: none;
     color: $CcBluelagoon;
     border: 2px solid $CcBluelagoon;
-    margin: 0 .8rem; 
+    margin: 0 .8rem;
 }
 
 // This is the commonly used styled word in the page
