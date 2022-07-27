@@ -17,10 +17,10 @@
                 <a class="text-uppercase btn activeGreenLink px-4 mb-4" @click.prevent href="#">see all</a>
             </div>
         </div>
-        <div class="row row-cols-3">
+        <div class="cards m-0">
             <div
             v-for="(card, index) in servicesInfos" :key="index" 
-            class="services-card col rounded px-5 py-4">
+            class="services-card rounded">
                 <div class="card-body">
                     <div class="d-flex justify-content-between">
                         <i :class="iconPath(card)"></i>
@@ -104,13 +104,19 @@ export default {
             color: gray;
         }
 
+        .cards{
+            display: flex;
+            flex-wrap: wrap;
+        }
+
         .services-card{
-            width: 20rem;
+            width: calc((100% / 3) - 1.6rem);
+            padding: 2.5rem;
             margin: .8rem;
             background-color: $CcWhite;
 
             i{
-                font-size: 2.8rem;
+                font-size: 2rem;
                 color: $CcBluelagoon;
             }
 
