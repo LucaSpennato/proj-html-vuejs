@@ -1,7 +1,7 @@
 <template>
-    <section id="action-projects" class="container-fluid flex-center">
-        <div class="container-medium p-4">
-            <div class="row text-center">
+    <section id="action-projects" class="container">
+        <div class="p-4 flex-center">
+            <div class="row col-10  text-center">
 
                 <div class="col-12 infos">
                     <h6 class="text-uppercase">
@@ -129,7 +129,7 @@ export default {
     @import '../../scss/style.scss';
 
     #action-projects{
-        margin: 6rem 0;
+        margin: 6rem auto;
         .infos{
             h1{
                 text-transform: capitalize;
