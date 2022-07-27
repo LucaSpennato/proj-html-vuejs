@@ -1,4 +1,7 @@
 // Page rule container, all section must use this container
+// Please note that the impagination follow bootstrap scaffolding, container > row > col
+// container medium is used througth the page to make a controllable and costant pagination
+
 .container-medium{
     width: 70%;
 };

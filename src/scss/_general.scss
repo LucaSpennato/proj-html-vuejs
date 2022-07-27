@@ -26,3 +26,7 @@
 .activeGreenLink{
     @include activeElementGreen;
 }
+
+.company-styled-word{
+    @include companyStyledWord;
+}

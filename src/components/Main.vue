@@ -1,9 +1,7 @@
 <template>
   
   <main>
-    <section>
-        section one
-    </section>
+    <ServicesSection/>
 
     <section>
         section two
@@ -14,8 +12,12 @@
 </template>
 
 <script>
+import ServicesSection from './MainComponents/ServicesSection.vue';
 export default {
     name: 'MainComponent',
+    components:{
+      ServicesSection,
+    }
 }
 </script>
 
