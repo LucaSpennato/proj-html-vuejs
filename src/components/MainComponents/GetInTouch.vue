@@ -2,7 +2,7 @@
   <section id="get-touch">
     <div class="container flex-center">
         <div class="row col-10">
-            <div class="col-7 infos">
+                <div class="col-7 infos">
                     <h6 class="text-uppercase">
                         send a message
                     </h6>
@@ -13,7 +13,34 @@
                     <p>
                         We will responde to your message as soon as possible.
                     </p>
+                    <div class="input-group">
+                        <input type="text" placeholder="Name">
+                        <input type="email" placeholder="Email">
+                        <input type="tel" placeholder="Phone">
+                        <select name="more-info">
+                            <option selected value="">More info</option>
+                            <option value="1">Option 1</option>
+                            <option value="2">Option 2</option>
+                            <option value="3">Option 3</option>
+                        </select>
+                        <textarea name="area-message" cols="30" rows="10" placeholder="Message"></textarea>
+                    </div>
                 </div>
+            <div class="right-side col-5">
+                <h5>
+                    Example Inc.
+                </h5>
+                <div>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </div>
+                <div>
+                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </div>
+                <div class="contact" v-for="(contact, index) in contactUsInfo" :key="index">
+                    <i :class="iconPath(contact)"></i>
+                    <span>{{ contact.text }}</span>
+                </div>
+            </div>
         </div>
     </div>
   </section>
@@ -22,6 +49,33 @@
 <script>
 export default {
     name: 'GetInTouch',
+    methods:{
+        iconPath: function(object){
+            return 'bi bi-' + object.icon;
+            
+        }
+    },
+    data: function(){
+        return{
+            contactUsInfo: [
+                {
+                    icon: 'telephone',
+                    url: '#',
+                    text: '+1(305) 1234-5678',
+                },
+                {
+                    icon: 'envelope',
+                    url: '#',
+                    text: 'hello@example.com',
+                },
+                {
+                    icon: 'geo-alt',
+                    url: '#',
+                    text: 'main avenue, 987',
+                },
+            ]
+        }
+    }
 }
 </script>
 
@@ -43,6 +97,29 @@ export default {
             }
             p{
                 color: $CcPumice;
+            }
+        }
+        .input-group{
+            padding-top: 1.5rem;
+            input, select, textarea{
+                border: none;
+                background-color: $McGrayNurse;
+                padding: .6rem;
+                margin: .3rem;
+                color: gray;
+            }
+            input, select{
+                width: calc(50% - .6rem);
+            }
+            textarea{
+                width: 100%;
+            }
+        }
+
+        .right-side{
+            padding: 1rem;
+            h5{
+                font-weight: bold;
             }
         }
     }
