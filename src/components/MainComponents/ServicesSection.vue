@@ -33,6 +33,49 @@
 <script>
 export default {
     name: 'ServicesSection',
+    data: function(){
+        return{
+            servicesInfos:[
+                {
+                    icon: 'network',
+                    title: 'audit & assurance',
+                    text: 'Lorem ipsum dolor sit amet consectetur adipiscing elit.',
+                    url: '#',
+                },
+                {
+                    icon: 'briefcase',
+                    title: 'financial advisory',
+                    text: 'Lorem ipsum dolor sit amet consectetur adipiscing elit.',
+                    url: '#',
+                },
+                {
+                    icon: 'bar-chart',
+                    title: 'analitics and m&a',
+                    text: 'Lorem ipsum dolor sit amet consectetur adipiscing elit.',
+                    url: '#',
+                },
+                {
+                    icon: 'airplane',
+                    title: 'middle marketing',
+                    text: 'Lorem ipsum dolor sit amet consectetur adipiscing elit.',
+                    url: '#',
+                },
+                {
+                    icon: 'globe',
+                    title: 'legal consulting',
+                    text: 'Lorem ipsum dolor sit amet consectetur adipiscing elit.',
+                    url: '#',
+                },
+                {
+                    icon: 'inbox',
+                    title: 'regulatory risk',
+                    text: 'Lorem ipsum dolor sit amet consectetur adipiscing elit.',
+                    url: '#',
+                },
+            ]
+            
+        }
+    }
 }
 </script>
 
