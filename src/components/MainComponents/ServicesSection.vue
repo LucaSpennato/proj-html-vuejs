@@ -3,9 +3,9 @@
     <div class="container-medium">
         <div class="row justify-content-between">
             <div class="col-8">
-                <div class="text-uppercase">
+                <h6 class="text-uppercase">
                     our business areas
-                </div>
+                </h6>
                 <h1 class="fw-bold py-4">
                     Exellence in <span class="company-styled-word">Services</span>
                 </h1>
@@ -20,9 +20,14 @@
         <div class="row row-cols-3">
             <div
             v-for="(card, index) in servicesInfos" :key="index" 
-            class="services-card col rounded p-5">
+            class="services-card col rounded px-5 py-4">
                 <div class="card-body">
-                    <i :class="iconPath(card)" class="fs-1"></i>
+                    <div class="d-flex justify-content-between">
+                        <i :class="iconPath(card)"></i>
+                        <a :href="card.url" @click.prevent>
+                            <i class="bi bi-arrow-right-short"></i>
+                        </a>
+                    </div>
                     <h5 class="card-title text-capitalize py-3">{{ card.title }}</h5>
                     <p class="card-text">{{ card.text }}</p>
                 </div>
@@ -92,6 +97,9 @@ export default {
         background-color: $ServicesBg;
         padding: 8rem 0;
 
+        h6{
+            color: $CcBluelagoon;
+        }
         p{
             color: gray;
         }
@@ -102,8 +110,19 @@ export default {
             background-color: $CcWhite;
 
             i{
+                font-size: 2.8rem;
                 color: $CcBluelagoon;
             }
+
+            a{
+                display: none;
+                opacity: .6;
+            }
+
+            &:hover a{
+                display: inline-block;
+            }
+
         }
     }
 
