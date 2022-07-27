@@ -1,8 +1,9 @@
 <template>
-  <section class="carousel-section container-fluid p-0">
+  <section class="carousel-section p-0">
     <HeaderNav/>
-    <div class="carousel flex-center  text-center">
-      <div class="container-small" 
+    <div class="container">
+      <div class="row carousel flex-center text-center">
+        <div class="col-8" 
         @mouseover="heroAutoPlayStop()" @mouseleave="heroAutoplayStart()"
         v-for="(infos, index) in carouselElements" :key="index" 
         v-show="currentActive === index">
@@ -31,10 +32,10 @@
         <div class="lateral-thumb my-2"
         :class="{'activeGreenLink' : currentActive === index}" 
         @click="changeOnThumbClick(index)"
-          v-for="(thumb, index) in carouselElements" :key="index">
-            
+          v-for="(thumb, index) in carouselElements" :key="index">  
         </div>
       </div>
+    </div>
   </section>
 </template>
 
@@ -137,14 +138,20 @@ export default {
     @import '../../scss/style.scss';
 
     .carousel-section{
-      height: 100vh;
-      background-image: url('../../assets/backgrounds/bg-parallax.png'), 
-                        // carousel placeholder, the og one file is corrupted
-                        url('https://static.vecteezy.com/system/resources/previews/006/304/593/original/abstract-white-and-light-grey-geometric-square-overlapped-pattern-on-background-with-shadow-modern-silver-color-cube-shape-with-copy-space-simple-and-minimal-banner-design-eps10-vector.jpg');
-      background-position: center;
+      height: 100vh; 
+      background-image:
+      url('../../assets/backgrounds/bg-parallax.png'),
+      // carousel placeholder, the og one file is corrupted
+      url('https://static.vecteezy.com/system/resources/previews/006/304/593/original/abstract-white-and-light-grey-geometric-square-overlapped-pattern-on-background-with-shadow-modern-silver-color-cube-shape-with-copy-space-simple-and-minimal-banner-design-eps10-vector.jpg');
+      background-position:center;
+      background-repeat: no-repeat;
+      background-size: cover;
 
-        .carousel{
-          height: 80%;
+        .container{
+          height: 90%;
+          display: flex;
+          align-items: center;
+          justify-content: center;          
           
           .title{
             text-transform: capitalize;

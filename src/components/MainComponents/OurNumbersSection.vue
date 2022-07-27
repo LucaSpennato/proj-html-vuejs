@@ -1,5 +1,6 @@
 <template>
-  <section id="results-section" class="container-fluid flex-center">
+  <section id="results-section" class="container-fluid">
+    <div class="container flex-center">
         <div class="container-medium">
             <div class="row text-center">
                 <div class="col-12 infos">
@@ -22,6 +23,7 @@
 
             </div>
         </div>
+    </div>
     </section>    
 </template>
 

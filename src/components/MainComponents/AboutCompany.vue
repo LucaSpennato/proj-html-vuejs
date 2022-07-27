@@ -1,6 +1,7 @@
 <template>
   <section id="about-company" class="container-fluid p-0">
-        <div class="row col-12 m-0">
+        <div class="container">
+            <div class="row col-12 m-0">
             <div class="col-6 d-flex justify-content-end mt-5 p-4">
                 <div class="container-medium">
                     <div class="infos">
@@ -43,6 +44,7 @@
                     <img :src="require('../../assets/general/bullets.png')" alt="style-dots">
                 </div>
             </div>
+        </div>
         </div>
     </section>
 </template>
