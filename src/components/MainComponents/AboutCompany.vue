@@ -38,6 +38,10 @@
             </div>
             <div class="col-6 p-0">
                 <img class="w-100" :src="require('../../assets/backgrounds/about-4.jpg')" alt="about-image">
+                <div class="right-column">
+                    <img :src="require('../../assets/general/bullets.png')" alt="style-dots">
+                    <img :src="require('../../assets/general/bullets.png')" alt="style-dots">
+                </div>
             </div>
         </div>
     </section>
@@ -84,6 +88,7 @@ export default {
     @import '../../scss/style.scss';
     #about-company{   
         background-color: $CcWoodsmoke;
+        position: relative;
         .infos{
             h1{
             color: white;
@@ -125,6 +130,25 @@ export default {
             &:hover{
                 @include activeElementGreen;
             }
+        }
+
+        .right-column{
+            img{
+                position: absolute;
+                width: 7rem;
+                height: 3rem;
+                object-fit: cover;
+                transform: translate(-50%, -50%);
+                left: 50%;
+                opacity: .3;
+            }
+            img:nth-child(1){
+                top: -3px;
+            }
+            img:nth-child(2){
+                bottom: -2.8rem;
+            }
+
         }
     }
 </style>
