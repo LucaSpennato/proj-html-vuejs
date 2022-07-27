@@ -2,7 +2,7 @@
   <section id="services" class="container-fluid flex-center">
     <div class="container-medium">
         <div class="row justify-content-between">
-            <div class="col-8">
+            <div class="infos col-8 px-4">
                 <h6 class="text-uppercase">
                     our business areas
                 </h6>
@@ -96,15 +96,17 @@ export default {
     #services{
         background-color: $ServicesBg;
         padding: 8rem 0;
-        h1 span{
-            @include companyStyledWord;
-        }
-        h6{
-            color: $CcBluelagoon;
-            font-size: .8rem;
-        }
-        p{
-            color: gray;
+        .infos{
+            span{
+                @include companyStyledWord;
+            }
+            h6{
+                color: $CcBluelagoon;
+                font-size: .8rem;
+            }
+            p{
+                color: gray;
+            }
         }
 
         .services-card{
