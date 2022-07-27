@@ -13,7 +13,7 @@
                     </h1>
                 </div>
 
-                <div class="col-12">
+                <div class="col-12 mb-5">
                     <nav>
                         <ul class="list-reset" v-for="(link, index) in navLinks" :key="index">
                             <li class="mx-1">
@@ -29,7 +29,10 @@
                 <div class="col-12">
                     <div class="card-projects"
                     v-for="(card, index) in projectsInfos" :key="index">
-                        {{ card.text }}
+                        <img class="img-fluid rounded" 
+                        :src="imgPath(card)" 
+                        :alt="imgPath(card) + 'project image'">
+                        <p class="rounded">{{ card.text }}</p>
                     </div>
                 </div>
             </div>
@@ -48,6 +51,9 @@ export default {
             });
             this.navLinks[index].active = true;
         },
+        imgPath: function(object){
+            return require('../../assets/projects/project-' + object.img + '.jpg');
+        }
     },
     data: function(){
         return{
@@ -142,7 +148,6 @@ export default {
 
         nav{
         padding: 2rem 0;
-        height: 3rem;
         .active{
             background-color: rgba($CcBluelagoon, .3);
             border: 0;
@@ -152,9 +157,29 @@ export default {
             text-transform: uppercase;
             a:hover{
                 @include companyStyledWordBg;
+                }
             }
         }
-    }
+        .card-projects{
+            display: inline-block;
+            width: calc((100% / 3) - 1.6rem);
+            margin: .8rem;
+            position: relative;
+
+            p{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: flex-end;
+                padding: 2rem 1rem;
+                font-weight: bold;
+                font-size: 1.2rem;
+                color: $CcWhite;
+                background-color: rgba(black, .4);
+                top: 0;
+            }
+        }
     }
 
 </style>
