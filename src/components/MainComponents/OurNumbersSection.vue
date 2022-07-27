@@ -48,26 +48,6 @@ export default {
                 area: 'countries served',
             },
         ],
-        technologies:[
-            {
-                logo: '4',
-            },
-            {
-                logo: '5',
-            },
-            {
-                logo: '1',
-            },
-            {
-                logo: '2',
-            },
-            {
-                logo: '3',
-            },
-            {
-                logo: '4',
-            },
-        ]
        }
     }
 }
@@ -104,11 +84,6 @@ export default {
                 color: $CcWhite;
             }
         }
-
-        .technologies{
-            background-color: $McShark;
-        }
-
     }
 
 </style>
