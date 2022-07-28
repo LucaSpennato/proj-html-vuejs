@@ -2,7 +2,7 @@
   <section id="services" class="container-fluid">
     <div class="container">
         <div class="row col-10 offset-1">
-            <div class="row justify-content-center">
+            <div class="row justify-content-center mb-4">
                 <div class="infos col-8 px-4">
                     <h6 class="text-uppercase">
                         our business areas
@@ -18,7 +18,7 @@
                     <a class="text-uppercase btn activeGreenLink px-4 mb-4" @click.prevent href="#">see all</a>
                 </div>
             </div>
-            <div class="row col-12 m-0 p-0 gap-3 justify-content-center">
+            <div class="row gap-3 justify-content-center">
                 <div
                 v-for="(card, index) in servicesInfos" :key="index" 
                 class="col-3 services-card rounded">
@@ -112,7 +112,7 @@ export default {
         }
 
         .services-card{
-            padding: 1.7rem;
+            padding: 1.8rem;
             background-color: $CcWhite;
 
             i{

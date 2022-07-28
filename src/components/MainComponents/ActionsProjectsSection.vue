@@ -1,7 +1,7 @@
 <template>
     <section id="action-projects" class="container">
         <div class="p-4 flex-center">
-            <div class="row col-10  text-center">
+            <div class="row col-10 text-center">
 
                 <div class="col-12 infos">
                     <h6 class="text-uppercase">
