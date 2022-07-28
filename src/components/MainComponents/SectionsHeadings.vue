@@ -23,7 +23,7 @@
 
 <script>
 export default {
-    name: 'HeadingTypeOne',
+    name: 'SectionHeadings',
     props:{
         info: Object,
     },
