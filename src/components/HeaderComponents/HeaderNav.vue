@@ -9,7 +9,7 @@
                         <ul class="list-reset" v-for="(link, index) in navLinks" :key="index">
                             <li class="mx-1">
                                 <a @click.prevent="navClick(index)" 
-                                class="btn p-2 fw-semibold" 
+                                class="btn p-2" 
                                 :class="{'activeElementBrandColor' : link.active}"
                                 :href="link.url">{{ link.text }}</a>
                             </li>
