@@ -17,9 +17,9 @@
                 </p>
               </div>
             </div>
-            <div>
-              <a class="btn" href="#">get in touch</a>
-              <a class="btn" href="#">read more</a>
+            <div class="mt-3">
+              <a class="btn m-0 me-4" href="#">get in touch</a>
+              <a class="btn m-0" href="#">read more</a>
             </div>
       </div>
       <div class="side-imgs col-3 col-lg-6 p-0">
@@ -119,11 +119,13 @@ export default {
         }
         p {
         margin-top: 1rem;
+        font-size: .8rem;
         color: $secondaryTextColor;
         }
     }
     a {
         @include inactiveElementBrandColor;
+        color: $lightTextColor;
 
         &:hover {
         @include activeElementBrandColor;
