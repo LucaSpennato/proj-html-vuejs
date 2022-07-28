@@ -33,7 +33,7 @@
               <a class="btn" href="#">read more</a>
             </div>
       </div>
-      <div class="side-imgs col-6 p-0">
+      <div class="side-imgs col-3 col-lg-6 p-0">
         <img
           
           :src="require('../../assets/backgrounds/about-4.jpg')"
@@ -144,8 +144,8 @@ export default {
     }
     .side-imgs{
         img{
-            width: 47.5rem;
-            height: 43rem;
+            width: 115%;
+            height: 100%;
             object-fit: cover;
         }
     }

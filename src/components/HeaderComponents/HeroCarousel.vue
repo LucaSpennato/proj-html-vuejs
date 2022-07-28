@@ -179,7 +179,7 @@ export default {
 
       .thumb-wrapper{
         position: absolute;
-        right: -5rem;
+        right: -2rem;
         top: 12rem;
 
       }
