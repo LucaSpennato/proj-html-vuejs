@@ -13,13 +13,15 @@
                             </a>
                             <input type="email" placeholder="Email">
                         </div>
-                        <input type="tel" placeholder="Phone">
-                        <select name="more-info">
-                            <option selected value="">More info</option>
-                            <option value="1">Option 1</option>
-                            <option value="2">Option 2</option>
-                            <option value="3">Option 3</option>
-                        </select>
+                        <div class="middle-input">
+                            <input type="tel" placeholder="Phone">
+                            <select name="more-info">
+                                <option selected value="">More info</option>
+                                <option value="1">Option 1</option>
+                                <option value="2">Option 2</option>
+                                <option value="3">Option 3</option>
+                            </select>
+                        </div>
                         <textarea name="area-message" cols="30" rows="10" placeholder="Message"></textarea>
                 </div>
                     </div>
