@@ -1,6 +1,6 @@
 <template>
   <div class="infos p-0">
-        <h6 class="text-uppercase fw-bold">
+        <h6 class="text-uppercase">
             {{ info.topSubtitle }}
         </h6>
         <h1 class="fw-bold py-4" v-if="info.typeOne">
@@ -40,6 +40,7 @@ export default {
         .infos{
             h1{
                 text-transform: capitalize;
+                font-weight: 900;
             }
             h6{
                 color: $brandTextColor;
