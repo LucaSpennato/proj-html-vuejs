@@ -138,7 +138,7 @@ export default {
     @import '../../scss/style.scss';
 
     .carousel-section{
-      height: 100vh; 
+      // height: 100vh; 
       background-image:
       url('../../assets/backgrounds/bg-parallax.png'),
       // carousel placeholder, the og one file is corrupted
@@ -148,7 +148,9 @@ export default {
       background-size: cover;
 
         .container{
-          height: 90%;
+          // height: 90%;
+          padding: 10rem 0;
+          position: relative;
           display: flex;
           align-items: center;
           justify-content: center;          
@@ -177,8 +179,8 @@ export default {
 
       .thumb-wrapper{
         position: absolute;
-        right: .8rem;
-        top: 50%;
+        right: -5rem;
+        top: 12rem;
 
       }
 

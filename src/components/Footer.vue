@@ -1,20 +1,20 @@
 <template>
   
     <footer>
-        <LinksNavSection/>
+        <FooterLinksNavSection/>
         <FootBottomSection/>
     </footer>
 
 </template>
 
 <script>
-import LinksNavSection from './FooterComponents/LinksNavSection.vue';
+import FooterLinksNavSection from './FooterComponents/FooterLinksNavSection.vue';
 import FootBottomSection from './FooterComponents/FootBottomSection.vue';
 
 export default {
     name: 'FooterComponent',
     components:{
-        LinksNavSection,
+        FooterLinksNavSection,
         FootBottomSection,
     }
 }
