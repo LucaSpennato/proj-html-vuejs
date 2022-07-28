@@ -22,7 +22,7 @@ export default {
     @import '../../scss/style.scss';
     #nav-links{
         list-style: none;
-        background-color: $MdBigStoneDarkVibrant;
+        background-color: $McShark;
         padding: 1.5rem;
 
         li{
@@ -31,7 +31,7 @@ export default {
 
             a{
                 font-size: .8rem;
-                color: $CcWhite;
+                color: $CcPumice;
                 text-decoration: none;
             }
             i{

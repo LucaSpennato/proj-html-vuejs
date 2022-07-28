@@ -36,11 +36,16 @@
                 <div>
                     Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                 </div>
-                <div class="contact" v-for="(contact, index) in contactUsInfo" :key="index">
-                    <i :class="iconPath(contact)"></i>
-                    <span>{{ contact.text }}</span>
-                </div>
-                <a class="btn" href="#" @click.prevent>view map</a>
+                <ul class="contact p-0">
+                    <li v-for="(contact, index) in contactUsInfo" :key="index">
+                        <a :href="contact.url" @click.prevent>
+                            <i :class="iconPath(contact)"></i>
+                            <span>{{ contact.text }}</span>
+                        </a>
+                    </li>
+                    
+                </ul>
+                <a class="view-map btn" href="#" @click.prevent>view map</a>
             </div>
         </div>
     </div>
@@ -52,8 +57,7 @@ export default {
     name: 'GetInTouch',
     methods:{
         iconPath: function(object){
-            return 'bi bi-' + object.icon + '-fill';
-            
+            return 'bi bi-' + object.icon + '-fill';  
         }
     },
     data: function(){
@@ -127,7 +131,14 @@ export default {
                 color: $CcPumice;
             }
             .contact{
-                margin: 1rem 0;
+                margin: 2rem 0;
+                list-style: none;
+                li{
+                    margin: 1.5rem 0;
+                }
+                a{
+                    text-decoration: none
+                }
                 i{
                     @include companyStyledWord;
                     padding: .7rem;
@@ -137,12 +148,10 @@ export default {
                     color: $CcBluelagoon;
                     margin-left: .5rem;
                     text-transform: capitalize;
-                }
-
-                
+                } 
             }
 
-            a{
+            .view-map{
                 @include inactiveElementGreen;
 
                 &:hover{

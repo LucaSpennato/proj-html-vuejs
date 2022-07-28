@@ -2,6 +2,16 @@
   <section id="footer-top">
     <div class="container">
         <div class="row col-10">
+            <div class="col-5">
+                <ul class="contact" >
+                    <li v-for="(contact, index) in contactUsInfo" :key="index">
+                        <a :href="contact.url" @click.prevent>
+                            <i :class="iconPath(contact)"></i>
+                            <span>{{ contact.text }}</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
             <LinksNav
             v-for="(lists, index) in footerLinks" :key="index"
             :linksTitle="lists.title"
@@ -21,8 +31,30 @@ export default {
     components:{
         LinksNav,
     },
+    methods:{
+        iconPath: function(object){
+            return 'bi bi-' + object.icon + '-fill';  
+        }
+    },
     data: function(){
         return{
+            contactUsInfo: [
+                {
+                    icon: 'telephone',
+                    url: '#',
+                    text: '+1(305) 1234-5678',
+                },
+                {
+                    icon: 'envelope',
+                    url: '#',
+                    text: 'hello@example.com',
+                },
+                {
+                    icon: 'geo-alt',
+                    url: '#',
+                    text: 'main avenue, 987',
+                },
+            ],
             footerLinks:[
                 {
                     title:'about',
@@ -119,5 +151,25 @@ export default {
 
 <style lang="scss">
     @import '../../scss/style.scss';
+    #footer-top{
+        padding: 7rem;
+        background-color: $CcWoodsmoke;
+        .contact{
+            list-style: none;
+            margin: 1rem 0;
+            li{
+                margin: 1rem 0;
+            }
+            a{
+                color: $CcPumice;
+                text-decoration: none;
+            }
+            span{
+                margin-left: .5rem;
+                text-transform: capitalize;
+            }
+        }
+
+    }
 
 </style>
