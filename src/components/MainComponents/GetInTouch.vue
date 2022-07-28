@@ -5,8 +5,14 @@
                 <div class="col-7 infos">
                     <SectionsHeadings :info="titleInfo" />
                     <div class="input-group">
-                        <input type="text" placeholder="Name">
-                        <input type="email" placeholder="Email">
+                        <div class="top-input">
+                            <input type="text" placeholder="Name">
+                            <a href="#" @click.prevent>
+                                <img id="input-name-img" 
+                                :src="require('../../assets/general/input-image.png')" alt="input-name-img">
+                            </a>
+                            <input type="email" placeholder="Email">
+                        </div>
                         <input type="tel" placeholder="Phone">
                         <select name="more-info">
                             <option selected value="">More info</option>
@@ -106,8 +112,18 @@ export default {
             input, select{
                 width: calc(50% - .6rem);
             }
-            textarea{
+            textarea, div{
                 width: 100%;
+            }
+            .top-input{
+                position: relative;
+            }
+            #input-name-img{
+                position: absolute;
+                z-index: 1;
+                transform: translate(-50%, -50%);
+                top: 50%;
+                left: 46%;
             }
         }
 
