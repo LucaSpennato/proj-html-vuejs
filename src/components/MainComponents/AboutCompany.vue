@@ -96,7 +96,7 @@ export default {
 <style lang="scss">
     @import "../../scss/style.scss";
     #about-company {
-    background-color: $CcWoodsmoke;
+    background-color: $darkBrandBg;
     position: relative;
     
     .left-col{
@@ -108,25 +108,25 @@ export default {
         margin-left: 0.3rem;
         margin-top: 1.7rem;
         i {
-        color: $CcBluelagoon;
+        color: $brandTextColor;
         font-size: 1.3rem;
         }
         h5 {
         display: inline;
-        color: $CcWhite;
+        color: $lightTextColor;
         text-transform: capitalize;
         margin-left: 0.3rem;
         }
         p {
         margin-top: 1rem;
-        color: $CcPumice;
+        color: $secondaryTextColor;
         }
     }
     a {
-        @include inactiveElementGreen;
+        @include inactiveElementBrandColor;
 
         &:hover {
-        @include activeElementGreen;
+        @include activeElementBrandColor;
         }
     }
     .side-imgs{

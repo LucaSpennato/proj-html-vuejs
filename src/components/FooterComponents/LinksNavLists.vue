@@ -22,16 +22,16 @@ export default {
     @import '../../scss/style.scss';
     #nav-links{
         list-style: none;
-        background-color: $McShark;
+        background-color: $secodaryDarkBrandBg;
         padding: 1.5rem;
 
         li{
-            color: $CcWhite;
+            color: $lightTextColor;
             text-transform: capitalize;
 
             a{
                 font-size: .8rem;
-                color: $CcPumice;
+                color: $secondaryTextColor;
                 text-decoration: none;
             }
             i{

@@ -33,7 +33,7 @@ export default {
         color: $CcPumice;
         font-size: .7rem;
         a{
-            color: $CcBluelagoon;
+            color: $brandTextColor;
             text-decoration: none;
         }
         i{
@@ -41,7 +41,7 @@ export default {
             color: black;
             border-radius: 50%;
             font-size: 1.5rem;
-            background-color: $McShark;
+            background-color: $secodaryDarkBrandBg;
         }
     }
 </style>

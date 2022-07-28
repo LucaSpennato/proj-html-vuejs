@@ -159,7 +159,7 @@ export default {
     @import '../../scss/style.scss';
     #footer-top{
         padding: 7rem;
-        background-color: $CcWoodsmoke;
+        background-color: $darkBrandBg;
             img{
                 filter: hue-rotate(180deg) invert(100%);
             }
@@ -169,11 +169,11 @@ export default {
             li{
                 text-transform: capitalize;
                 margin-bottom: 1rem;
-                color: $CcPumice;
+                color: $secondaryTextColor;
                 font-size: .8rem;
             }
             a{
-                color: $CcPumice;
+                color: $secondaryTextColor;
                 text-decoration: none;
             }
             span{
@@ -182,12 +182,12 @@ export default {
             }
         }
         .get-in-touch{
-                @include inactiveElementGreen;
+                @include inactiveElementBrandColor;
                 color: $CcWhite;
                 margin-left: 0;
 
                 &:hover{
-                @include activeElementGreen;
+                @include activeElementBrandColor;
             }
         }    
     }

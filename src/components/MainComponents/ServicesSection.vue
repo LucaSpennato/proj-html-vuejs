@@ -111,11 +111,11 @@ export default {
 
   .services-card {
     padding: 1.8rem;
-    background-color: $CcWhite;
+    background-color: $lightTextColor;
 
     i {
       font-size: 2rem;
-      color: $CcBluelagoon;
+      color: $brandTextColor;
     }
 
     h5 {

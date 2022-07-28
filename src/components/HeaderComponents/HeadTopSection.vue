@@ -76,7 +76,7 @@ export default {
 
     #headTopSection{
         background-color: $TopHeaderBg;
-        color: $CcPumice;
+        color: $secondaryTextColor;
 
         ul{
             display: flex;
@@ -92,7 +92,7 @@ export default {
                 text-transform: capitalize;
             }
             li a{
-                color: $CcPumice;
+                color: $secondaryTextColor;
             }
         };
     };

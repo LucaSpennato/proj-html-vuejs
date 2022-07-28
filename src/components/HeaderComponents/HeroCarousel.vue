@@ -138,7 +138,6 @@ export default {
     @import '../../scss/style.scss';
 
     .carousel-section{
-      // height: 100vh; 
       background-image:
       url('../../assets/backgrounds/bg-parallax.png'),
       // carousel placeholder, the og one file is corrupted
@@ -148,7 +147,6 @@ export default {
       background-size: cover;
 
         .container{
-          // height: 90%;
           padding: 10rem 0;
           position: relative;
           display: flex;
@@ -168,10 +166,10 @@ export default {
           }
 
           ul li a{
-            @include inactiveElementGreen;
+            @include inactiveElementBrandColor;
 
             &:hover{
-              @include activeElementGreen;
+              @include activeElementBrandColor;
             }
           }
       }

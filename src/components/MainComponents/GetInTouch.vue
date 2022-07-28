@@ -118,7 +118,7 @@ export default {
             }
             div{
                 padding: .9rem 0;
-                color: $CcPumice;
+                color: $secondaryTextColor;
             }
             .contact{
                 margin: 2rem 0;
@@ -142,10 +142,10 @@ export default {
             }
 
             .view-map{
-                @include inactiveElementGreen;
+                @include inactiveElementBrandColor;
 
                 &:hover{
-                @include activeElementGreen;
+                @include activeElementBrandColor;
             }
         }
     }

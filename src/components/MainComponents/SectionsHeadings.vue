@@ -42,11 +42,11 @@ export default {
                 text-transform: capitalize;
             }
             h6{
-                color: $CcBluelagoon;
+                color: $brandTextColor;
                 font-size: .8rem;
             }
             p{
-                color: $CcPumice;
+                color: $secondaryTextColor;
             }
         }
 

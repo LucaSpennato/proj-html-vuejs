@@ -80,7 +80,7 @@ export default {
         ul li{
             text-transform: uppercase;
             a:hover{
-                @include activeElementGreen;
+                @include activeElementBrandColor;
             }
         }
     }

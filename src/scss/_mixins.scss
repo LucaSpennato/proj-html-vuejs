@@ -8,27 +8,27 @@
 }
 
 // active element on hover or click
-@mixin activeElementGreen{
-    background-color: $CcBluelagoon !important;
+@mixin activeElementBrandColor{
+    background-color: $brandTextColor !important;
     color: white !important;
 }
 
-@mixin inactiveElementGreen{
+@mixin inactiveElementBrandColor{
     text-transform: uppercase;
     text-decoration: none;
-    color: $CcBluelagoon;
-    border: 2px solid $CcBluelagoon;
+    color: $brandTextColor;
+    border: 2px solid $brandTextColor;
     margin: 0 .8rem;
 }
 
 // This is the commonly used styled word in the page
 @mixin companyStyledWord{
-    color: $CcBluelagoon;
+    color: $brandTextColor;
     padding: 0 1.2rem;
-    background-color: rgba($CcFountainBlue, .3);
+    background-color: rgba($brandTextColorLight, .3);
 }
 
 @mixin companyStyledWordBg{
     padding: 0 1.2rem;
-    background-color: rgba($CcFountainBlue, .3);
+    background-color: rgba($brandTextColorLight, .3);
 }

@@ -47,11 +47,10 @@ export default {
     @import '../../scss/style.scss';
 
     #technologies{
-        background-color: $CcWoodsmoke;
+        background-color: $darkBrandBg;
         padding: 7rem;
         img{
             width: 6rem;
-            // margin: 0 2rem;
             filter: invert(50%);
         }
     }

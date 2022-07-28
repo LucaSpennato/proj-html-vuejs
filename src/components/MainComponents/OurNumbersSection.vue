@@ -68,11 +68,11 @@ export default {
         padding: 6rem 0;
         .result{
             h2{
-                color: $CcFountainBlue;
+                color: $brandTextColorLight;
             }
             h3{
                 text-transform: capitalize;
-                color: $CcWhite;
+                color: $lightTextColor;
             }
         }
     }
