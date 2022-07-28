@@ -47,6 +47,7 @@ export default {
             }
             p{
                 color: $secondaryTextColor;
+                font-size: .8rem;
             }
         }
 
