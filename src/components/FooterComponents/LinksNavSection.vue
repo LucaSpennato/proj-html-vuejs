@@ -3,10 +3,8 @@
     <div class="container">
         <div class="row col-10 justify-content-between">
             <div class="col-3 offset-2">
-                <img class="w-50" :src="require('../../assets/logos/logo.png')" alt="">
+                <img class="w-50" :src="require('../../assets/logos/logo.png')" alt="brand-logo">
                 <ul class="contact p-0">
-                    <li>
-                    </li>
                     <li>
                         a functional HTML template for corporate and business.
                     </li>
@@ -32,6 +30,7 @@
 
 <script>
 import LinksNav from './LinksNav.vue';
+
 
 export default {
     name:'FooterLinks',
@@ -161,6 +160,9 @@ export default {
     #footer-top{
         padding: 7rem;
         background-color: $CcWoodsmoke;
+            img{
+                filter: hue-rotate(180deg) invert(100%);
+            }
         .contact{
             list-style: none;
             margin: 1rem 0;
