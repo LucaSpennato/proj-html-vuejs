@@ -2,6 +2,7 @@
     <ul id="nav-links" class="col-2 rounded mx-2">
         <li><h5>{{linksTitle}}</h5></li>
         <li v-for="(link, index) in links" :key="index">
+            <span><i class="bi bi-chevron-right"></i></span>
             <a :href="link.url" @click.prevent>{{ link.text }}</a>
         </li>
     </ul>
@@ -29,8 +30,13 @@ export default {
             text-transform: capitalize;
 
             a{
+                font-size: .8rem;
                 color: $CcWhite;
                 text-decoration: none;
+            }
+            i{
+                margin-right: .3rem;
+                font-size: .8rem;
             }
         }
     }
