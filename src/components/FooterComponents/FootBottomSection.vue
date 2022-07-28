@@ -1,5 +1,5 @@
 <template>
-  <div class="container-fluid">
+  <section>
     <div class="container">
         <div class="row justify-content-between">
             <div class="row col-9 m-auto justify-content-between">
@@ -16,18 +16,18 @@
 
         </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
 export default {
-
+    name: 'BottomSection',
 }
 </script>
 
 <style lang="scss" scoped>
     @import '../../scss/style.scss';
-    div.container-fluid{
+    section{
         background-color: black;
         padding: 1rem;
         color: $CcPumice;
