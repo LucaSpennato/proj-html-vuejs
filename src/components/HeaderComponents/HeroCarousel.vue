@@ -30,7 +30,7 @@
       </div>
       <div class="thumb-wrapper">
         <div class="lateral-thumb my-2"
-        :class="{'activeGreenLink' : currentActive === index}" 
+        :class="{'activeElementBrandColor' : currentActive === index}" 
         @click="changeOnThumbClick(index)"
           v-for="(thumb, index) in carouselElements" :key="index">  
         </div>

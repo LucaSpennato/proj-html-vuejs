@@ -9,7 +9,7 @@
         
         <div class="col-3 d-flex align-items-end justify-content-end">
           <a
-            class="text-uppercase btn activeGreenLink px-4 mb-4 me-4"
+            class="text-uppercase btn activeElementBrandColor px-4 mb-4 me-4"
             @click.prevent
             href="#"
             >see all</a

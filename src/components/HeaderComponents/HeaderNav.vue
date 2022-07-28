@@ -10,7 +10,7 @@
                             <li class="mx-1">
                                 <a @click.prevent="navClick(index)" 
                                 class="btn p-2 fw-semibold" 
-                                :class="{'activeGreenLink' : link.active}"
+                                :class="{'activeElementBrandColor' : link.active}"
                                 :href="link.url">{{ link.text }}</a>
                             </li>
                         </ul>
