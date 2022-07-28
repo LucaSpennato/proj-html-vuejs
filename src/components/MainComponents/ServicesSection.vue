@@ -1,7 +1,7 @@
 <template>
   <section id="services" class="container-fluid">
-    <div class="container flex-center">
-        <div class="row col-10">
+    <div class="container">
+        <div class="row col-10 offset-1">
             <div class="row justify-content-center">
                 <div class="infos col-8 px-4">
                     <h6 class="text-uppercase">

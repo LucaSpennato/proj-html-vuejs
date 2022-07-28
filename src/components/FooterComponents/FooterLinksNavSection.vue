@@ -17,7 +17,7 @@
                 </ul>
                 <a class="get-in-touch btn" href="#" @click.prevent>get in touch</a>
             </div>
-            <LinksNav
+            <LinksNavLists
             v-for="(lists, index) in footerLinks" :key="index"
             :linksTitle="lists.title"
             :links="lists.links"
@@ -29,13 +29,13 @@
 </template>
 
 <script>
-import LinksNav from './LinksNav.vue';
+import LinksNavLists from './LinksNavLists.vue';
 
 
 export default {
     name:'FooterLinks',
     components:{
-        LinksNav,
+        LinksNavLists,
     },
     methods:{
         iconPath: function(object){
