@@ -1,5 +1,5 @@
 <template>       
-    <ul id="nav-links" class="col-2 rounded">
+    <ul id="nav-links" class="rounded">
         <li><h5>{{linksTitle}}</h5></li>
         <li v-for="(link, index) in links" :key="index">
             <span><i class="bi bi-chevron-right"></i></span>
@@ -24,6 +24,7 @@ export default {
         list-style: none;
         background-color: $secodaryDarkBrandBg;
         padding: 1.5rem;
+        width: calc((100% / 4) - 2rem);
 
         li{
             color: $lightTextColor;

@@ -3,7 +3,7 @@
     <div class="container">
         <div class="row justify-content-between">
             <div class="row col-9 m-auto justify-content-between">
-                <div class="col-4">
+                <div class="col-6">
                     Enjoy the low price. We are tracking any intention of privacy.
                 </div>
                 <div class="col-4 text-capitalize text-end">
