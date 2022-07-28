@@ -1,8 +1,6 @@
 <template>
-  <section class="carousel-section p-0">
-    <HeaderNav/>
-    <div class="container">
-      <div class="row carousel flex-center text-center">
+  <div class="container">
+      <div id="carousel" class="row flex-center text-center">
         <div class="col-7" 
         @mouseover="heroAutoPlayStop()" @mouseleave="heroAutoplayStart()"
         v-for="(infos, index) in carouselElements" :key="index" 
@@ -36,18 +34,12 @@
         </div>
       </div>
     </div>
-  </section>
 </template>
 
 <script>
-import HeaderNav from './HeaderNav.vue';
-
 export default {
-    name: 'HeroCarousel',
-    components:{
-        HeaderNav,
-    },
-    methods: {
+    name: 'Carousel',
+        methods: {
       splitFirstTitleWord(element){
         let word = element.split(" ");
         return word[0]
@@ -134,66 +126,58 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
     @import '../../scss/style.scss';
-
-    .carousel-section{
-      background-image:
-      url('../../assets/backgrounds/bg-parallax.png'),
-      // carousel placeholder, the og one file is corrupted
-      url('https://static.vecteezy.com/system/resources/previews/006/304/593/original/abstract-white-and-light-grey-geometric-square-overlapped-pattern-on-background-with-shadow-modern-silver-color-cube-shape-with-copy-space-simple-and-minimal-banner-design-eps10-vector.jpg');
-      background-position:center;
-      background-repeat: no-repeat;
-      background-size: cover;
-
-        .container{
-          padding: 10rem 0;
-          position: relative;
-          display: flex;
-          align-items: center;
-          justify-content: center;          
-          
-          .title{
-            text-transform: capitalize;
-
-            span:last-child{
-              @include companyStyledWord;
-            }
-          }
-
-          .decription{
-            color: darkgray;
-          }
-
-          ul li a{
-            @include inactiveElementBrandColor;
-
-            &:hover{
-              @include activeElementBrandColor;
-            }
-          }
-      }
-
-
-      .thumb-wrapper{
-        position: absolute;
-        right: -2rem;
-        top: 12rem;
-
-      }
-
-      .lateral-thumb{
-        height: 2.6rem;
-        width: .7rem;
-        border-radius: 20px;
-        border: 2px solid $CcBluelagoon;
         
-
-        &::after{
-          content: '\00A0';
+        .container{
+            position: relative;
         }
-      }
+          #carousel{
+            background-image: url('../../assets/backgrounds/bg-parallax.png');
+            background-position: center;
+            background-size: 200%;
+            background-repeat: no-repeat;
+            padding: 10rem 0;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;          
+            
+            .title{
+                text-transform: capitalize;
+                span:last-child{
+                @include companyStyledWord;
+                }
+            }
 
-    }
+            .decription{
+                color: darkgray;
+            }
+
+            ul li a{
+                @include inactiveElementBrandColor;
+                &:hover{
+                @include activeElementBrandColor;
+                }
+            }
+        }
+
+        .thumb-wrapper{
+            position: absolute;
+            right: -5%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .lateral-thumb{
+            height: 2.6rem;
+            width: .7rem;
+            border-radius: 20px;
+            border: 2px solid $CcBluelagoon;
+        
+            &::after{
+            content: '\00A0';
+            }
+      }
 
 </style>

@@ -1,19 +1,19 @@
 <template>
   <header>
     <HeadTopSection/>
-    <HeroCarousel/>
+    <Hero/>
   </header>
 </template>
 
 <script>
 import HeadTopSection from './HeaderComponents/HeadTopSection.vue';
-import HeroCarousel from './HeaderComponents/HeroCarousel.vue';
+import Hero from './HeaderComponents/Hero.vue';
 
 export default {
     name: 'HeaderComponent',
     components:{
         HeadTopSection,
-        HeroCarousel,
+        Hero,
     }
 }
 </script>

@@ -11,9 +11,7 @@
           <a
             class="text-uppercase btn activeElementBrandColor px-4 mb-4 me-4"
             @click.prevent
-            href="#"
-            >see all</a
-          >
+            href="#">see all</a>
         </div>
       </div>
         <ServicesCards :cardsInfo="servicesInfos"/>
