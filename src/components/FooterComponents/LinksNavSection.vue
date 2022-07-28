@@ -2,15 +2,9 @@
   <section id="footer-top">
     <div class="container">
         <div class="row col-10">
-
-            <div v-for="(lists, index) in footerLinks" :key="index">
-                {{ lists.links }}
-                <!-- <div v-for="(text, index) in text.links" :key="index">
-
-                </div> -->
-            </div>
             <LinksNav
             v-for="(lists, index) in footerLinks" :key="index"
+            :linksTitle="lists.title"
             :links="lists.links"
             />
         </div>
