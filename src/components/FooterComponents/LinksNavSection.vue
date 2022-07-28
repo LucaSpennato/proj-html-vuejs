@@ -1,9 +1,15 @@
 <template>
   <section id="footer-top">
     <div class="container">
-        <div class="row col-10">
-            <div class="col-5">
-                <ul class="contact" >
+        <div class="row col-10 justify-content-between">
+            <div class="col-3 offset-2">
+                <img class="w-50" :src="require('../../assets/logos/logo.png')" alt="">
+                <ul class="contact p-0">
+                    <li>
+                    </li>
+                    <li>
+                        a functional HTML template for corporate and business.
+                    </li>
                     <li v-for="(contact, index) in contactUsInfo" :key="index">
                         <a :href="contact.url" @click.prevent>
                             <i :class="iconPath(contact)"></i>
@@ -11,6 +17,7 @@
                         </a>
                     </li>
                 </ul>
+                <a class="get-in-touch btn" href="#" @click.prevent>get in touch</a>
             </div>
             <LinksNav
             v-for="(lists, index) in footerLinks" :key="index"
@@ -158,7 +165,10 @@ export default {
             list-style: none;
             margin: 1rem 0;
             li{
-                margin: 1rem 0;
+                text-transform: capitalize;
+                margin-bottom: 1rem;
+                color: $CcPumice;
+                font-size: .8rem;
             }
             a{
                 color: $CcPumice;
@@ -169,7 +179,15 @@ export default {
                 text-transform: capitalize;
             }
         }
+        .get-in-touch{
+                @include inactiveElementGreen;
+                color: $CcWhite;
+                margin-left: 0;
 
+                &:hover{
+                @include activeElementGreen;
+            }
+        }    
     }
 
 </style>

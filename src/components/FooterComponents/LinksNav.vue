@@ -1,5 +1,5 @@
-<template>
-    <ul id="nav-links" class="col-2 rounded mx-2">
+<template>       
+    <ul id="nav-links" class="col-2 rounded">
         <li><h5>{{linksTitle}}</h5></li>
         <li v-for="(link, index) in links" :key="index">
             <span><i class="bi bi-chevron-right"></i></span>
