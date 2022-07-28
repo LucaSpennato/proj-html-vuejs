@@ -1,13 +1,19 @@
 <template>
-  <div class="col-12 infos">
+  <div class="infos p-0">
         <h6 class="text-uppercase">
             {{ info.topSubtitle }}
         </h6>
-        <h1 class="fw-bold py-4">
+        <h1 class="fw-bold py-4" v-if="info.typeOne">
             {{ info.title }}
-            <span>
+            <span class="company-styled-word">
                 {{ info.brandTitle }}
             </span>
+        </h1>
+        <h1 v-if="info.typeTwo" class="text-light fw-bold py-4">
+            <span class="company-styled-word-bg me-2">
+                {{ info.brandTitle }}
+            </span>
+            {{ info.title }}
         </h1>
         <p v-if="info.description">
             {{ info.description }}
@@ -29,14 +35,11 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
     @import '../../scss/style.scss';
         .infos{
             h1{
                 text-transform: capitalize;
-            }
-            span{
-                @include companyStyledWord;
             }
             h6{
                 color: $CcBluelagoon;

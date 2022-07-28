@@ -3,16 +3,9 @@
     <div class="container flex-center">
         <div class="container-medium">
             <div class="row text-center">
-                <div class="col-12 infos">
-                    <h6 class="text-uppercase">
-                        what are we doing
-                    </h6>
-                    <h1 class="fw-bold py-4">
-                        <span>results</span>
-                        in Numbers
-                    </h1>
-                </div>
 
+                <SectionsHeadings :info="titleInfo" />
+                
                 <div class="row mt-5 justify-content-between">
                     <div class="result col-3 p-0" 
                     v-for="(result, index) in companyResults" :key="index">
@@ -28,10 +21,23 @@
 </template>
 
 <script>
+import SectionsHeadings from "./SectionsHeadings.vue";
+
 export default {
     name: 'OurNumbersSection',
+    components:{
+        SectionsHeadings,
+    },
     data: function(){
        return{
+            titleInfo: {
+                topSubtitle: "what are we doing",
+                title: "in numbers",
+                brandTitle: "results",
+                description: false,
+                typeOne: false,
+                typeTwo: true,
+            },
         companyResults:[
             {
                 number: '128',
@@ -60,23 +66,6 @@ export default {
     #results-section{
         background-image: url('../../assets/backgrounds/bg-7.jpg');
         padding: 6rem 0;
-        .infos{
-            h1{
-                text-transform: capitalize;
-                color: $CcWhite;
-            }
-            span{
-                @include companyStyledWordBg;
-            }
-            h6{
-                color: $CcBluelagoon;
-                font-size: .8rem;
-            }
-            p{
-                color: $CcPumice;
-            }
-        }
-
         .result{
             h2{
                 color: $CcFountainBlue;

@@ -3,16 +3,7 @@
     <div class="container flex-center">
         <div class="row col-10">
                 <div class="col-7 infos">
-                    <h6 class="text-uppercase">
-                        send a message
-                    </h6>
-                    <h1 class="fw-bold py-4">
-                        get in
-                        <span>touch</span>
-                    </h1>
-                    <p>
-                        We will responde to your message as soon as possible.
-                    </p>
+                    <SectionsHeadings :info="titleInfo" />
                     <div class="input-group">
                         <input type="text" placeholder="Name">
                         <input type="email" placeholder="Email">
@@ -24,8 +15,8 @@
                             <option value="3">Option 3</option>
                         </select>
                         <textarea name="area-message" cols="30" rows="10" placeholder="Message"></textarea>
-                    </div>
                 </div>
+                    </div>
             <div class="right-side col-5">
                 <h5>
                     Example Inc.
@@ -53,8 +44,13 @@
 </template>
 
 <script>
+import SectionsHeadings from "./SectionsHeadings.vue";
+
 export default {
     name: 'GetInTouch',
+    components:{
+        SectionsHeadings,
+    },
     methods:{
         iconPath: function(object){
             return 'bi bi-' + object.icon + '-fill';  
@@ -62,6 +58,14 @@ export default {
     },
     data: function(){
         return{
+            titleInfo: {
+                topSubtitle: "send a message",
+                title: "get in",
+                brandTitle: "touch",
+                description: 'We will responde to your message as soon as possible',
+                typeOne: true,
+                typeTwo: false,
+            },
             contactUsInfo: [
                 {
                     icon: 'telephone',
@@ -89,21 +93,7 @@ export default {
 
     #get-touch{
         padding: 7rem;
-        .infos{
-            h1{
-                text-transform: capitalize;
-            }
-            span{
-                @include companyStyledWord;
-            }
-            h6{
-                color: $CcBluelagoon;
-                font-size: .8rem;
-            }
-            p{
-                color: $CcPumice;
-            }
-        }
+
         .input-group{
             padding-top: 1.5rem;
             input, select, textarea{

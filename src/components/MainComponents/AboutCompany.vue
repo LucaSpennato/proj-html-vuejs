@@ -2,18 +2,7 @@
   <section id="about-company">
     <div class="container row m-auto">
       <div class="left-col col-4 offset-2">
-            <div class="infos">
-              <h6 class="text-uppercase">about the network</h6>
-              <h1 class="fw-bold py-4">
-                <span>The</span>
-                Company
-              </h1>
-              <p>
-                For 12 years we have been rpviding audit and warranty, financial
-                advice, risk advice, taxes and related services to select
-                clients.
-              </p>
-            </div>
+            <SectionsHeadings :info="titleInfo" />
             <div class="cards">
               <div
                 class="about-card"
@@ -55,8 +44,13 @@
 </template>
 
 <script>
+import SectionsHeadings from "./SectionsHeadings.vue";
+
 export default {
   name: "AboutTheCompany",
+  components:{
+    SectionsHeadings,
+  },
   methods: {
     iconPath: function (object) {
       return "bi bi-" + object.icon;
@@ -64,6 +58,14 @@ export default {
   },
   data: function () {
     return {
+      titleInfo: {
+                topSubtitle: "about the network",
+                title: "company",
+                brandTitle: "the",
+                description: 'For 12 years we have been providing audit and warranty, financial advice, risk advice, taxes and related services to select clients.',
+                typeOne: false,
+                typeTwo: true,
+            },
       aboutTheCompanyInfos: [
         {
           icon: "award",
@@ -97,21 +99,6 @@ export default {
     background-color: $CcWoodsmoke;
     position: relative;
     
-    .infos {
-        h1 {
-        color: white;
-        }
-        span {
-        @include companyStyledWordBg;
-        }
-        h6 {
-        color: $CcBluelagoon;
-        font-size: 0.8rem;
-        }
-        p {
-        color: $CcPumice;
-        }
-    }
     .left-col{
         margin-top: 4rem;
     }

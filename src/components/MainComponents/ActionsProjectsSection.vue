@@ -3,9 +3,7 @@
         <div class="p-4 flex-center">
             <div class="row col-10 text-center">
                 
-                <HeadingTypeOne 
-                :info="titleInfo"
-                />
+                <SectionsHeadings :info="titleInfo" />
 
                 <div class="col-12 mb-5">
                     <nav>
@@ -36,12 +34,12 @@
 </template>
 
 <script>
-import HeadingTypeOne from './HeadingTypeOne.vue';
+import SectionsHeadings from './SectionsHeadings.vue';
 
 export default {
     name: 'ActionsAndProjects',
     components:{
-        HeadingTypeOne,
+        SectionsHeadings,
     },
     methods:{
         navClick: function(index){
@@ -61,6 +59,8 @@ export default {
                 title: 'actions &',
                 brandTitle: 'projects',
                 description: false,
+                typeOne: true,
+                typeTwo: false,
             },
             navLinks:[
             {
