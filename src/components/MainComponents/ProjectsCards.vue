@@ -31,6 +31,7 @@ export default {
             width: calc((100% / 3) - 1.6rem);
             margin: .8rem;
             position: relative;
+            transition: transform 200ms linear;
 
             p{
                 position: absolute;
@@ -44,6 +45,10 @@ export default {
                 color: $CcWhite;
                 background-color: rgba(black, .4);
                 top: 0;
+            }
+
+            &:hover{
+                transform: scale(1.1);
             }
         }
 </style>

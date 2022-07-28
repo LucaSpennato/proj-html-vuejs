@@ -1,6 +1,6 @@
 <template>
   <div class="infos p-0">
-        <h6 class="text-uppercase">
+        <h6 class="text-uppercase fw-bold">
             {{ info.topSubtitle }}
         </h6>
         <h1 class="fw-bold py-4" v-if="info.typeOne">

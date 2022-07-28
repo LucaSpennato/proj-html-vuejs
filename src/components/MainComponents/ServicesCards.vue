@@ -37,6 +37,7 @@ export default {
 
     .services-card {
         background-color: $lightTextColor;
+        transition: transform 200ms linear;
 
         i {
         font-size: 2rem;
@@ -55,6 +56,9 @@ export default {
 
         &:hover a {
         display: inline-block;
+        }
+        &:hover{
+          transform: translate(0, -10%);
         }
   }
 </style>
