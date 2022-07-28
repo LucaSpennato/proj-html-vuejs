@@ -16,39 +16,20 @@
           >
         </div>
       </div>
-      <div class="row gap-3 justify-content-center mt-3">
-        <div
-          v-for="(card, index) in servicesInfos"
-          :key="index"
-          class="col-3 services-card rounded">
-          <div>
-            <div class="d-flex justify-content-between">
-              <i :class="iconPath(card)"></i>
-              <a :href="card.url" @click.prevent>
-                <i class="bi bi-arrow-right-short"></i>
-              </a>
-            </div>
-            <h5>{{ card.title }}</h5>
-            <p class="card-text">{{ card.text }}</p>
-          </div>
-        </div>
-      </div>
+        <ServicesCards :cardsInfo="servicesInfos"/>
     </div>
   </section>
 </template>
 
 <script>
 import SectionsHeadings from "./SectionsHeadings.vue";
+import ServicesCards from "./ServicesCards.vue";
 
 export default {
   name: "ServicesSection",
   components: {
     SectionsHeadings,
-  },
-  methods: {
-    iconPath: function (object) {
-      return "bi bi-" + object.icon;
-    },
+    ServicesCards,
   },
   data: function () {
     return {
@@ -108,29 +89,5 @@ export default {
 #services {
   background-color: $ServicesBg;
   padding: 8rem 0;
-
-  .services-card {
-    padding: 1.8rem;
-    background-color: $lightTextColor;
-
-    i {
-      font-size: 2rem;
-      color: $brandTextColor;
-    }
-
-    h5 {
-      text-transform: capitalize;
-      padding: 1.2rem 0;
-    }
-
-    a {
-      display: none;
-      opacity: 0.6;
-    }
-
-    &:hover a {
-      display: inline-block;
-    }
-  }
 }
 </style>
