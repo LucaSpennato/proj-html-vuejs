@@ -2,16 +2,10 @@
     <section id="action-projects" class="container">
         <div class="p-4 flex-center">
             <div class="row col-10 text-center">
-
-                <div class="col-12 infos">
-                    <h6 class="text-uppercase">
-                        we do more for everyone
-                    </h6>
-                    <h1 class="fw-bold py-4">
-                        actions &
-                        <span>projects</span>
-                    </h1>
-                </div>
+                
+                <HeadingTypeOne 
+                :info="titleInfo"
+                />
 
                 <div class="col-12 mb-5">
                     <nav>
@@ -42,8 +36,13 @@
 </template>
 
 <script>
+import HeadingTypeOne from './HeadingTypeOne.vue';
+
 export default {
     name: 'ActionsAndProjects',
+    components:{
+        HeadingTypeOne,
+    },
     methods:{
         navClick: function(index){
             this.navLinks.forEach(element => {
@@ -57,6 +56,12 @@ export default {
     },
     data: function(){
         return{
+            titleInfo:{
+                topSubtitle: 'we do more for everyone',
+                title: 'actions &',
+                brandTitle: 'projects',
+                description: false,
+            },
             navLinks:[
             {
                 url: '#',
@@ -130,21 +135,6 @@ export default {
 
     #action-projects{
         margin: 6rem auto;
-        .infos{
-            h1{
-                text-transform: capitalize;
-            }
-            span{
-                @include companyStyledWord;
-            }
-            h6{
-                color: $CcBluelagoon;
-                font-size: .8rem;
-            }
-            p{
-                color: $CcPumice;
-            }
-        }
 
         nav{
         padding: 2rem 0;
