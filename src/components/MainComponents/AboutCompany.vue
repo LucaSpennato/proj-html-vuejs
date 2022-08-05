@@ -3,9 +3,9 @@
     <div class="container row m-auto">
       <div class="left-col col-4 offset-2">
             <SectionsHeadings :info="titleInfo" />
-            <div class="cards">
+            <div class="row py-4">
               <div
-                class="about-card"
+                class="about-card col-6"
                 v-for="(card, index) in aboutTheCompanyInfos"
                 :key="index">
                 <i :class="iconPath(card)"></i>
@@ -24,7 +24,6 @@
       </div>
       <div class="side-imgs col-3 col-lg-6 p-0">
         <img
-          
           :src="require('../../assets/backgrounds/about-4.jpg')"
           alt="about-image"
         />
@@ -98,61 +97,57 @@ export default {
     background-color: $darkBrandBg;
     position: relative;
     
-    .left-col{
-        margin-top: 4rem;
-    }
-    .about-card {
-        display: inline-block;
-        width: calc((100% / 2) - 0.6rem);
-        margin-left: 0.3rem;
-        margin-top: 1.7rem;
-        i {
-        color: $brandTextColor;
-        font-size: 1.3rem;
-        }
-        h5 {
-        display: inline;
-        color: $lightTextColor;
-        text-transform: capitalize;
-        margin-left: 0.3rem;
-        }
-        p {
-        margin-top: 1rem;
-        font-size: .8rem;
-        color: $secondaryTextColor;
-        }
-    }
-    a {
-        @include inactiveElementBrandColor;
-        color: $lightTextColor;
+      .left-col{
+          margin-top: 4rem;
+      }
+      .about-card {
+          i {
+          color: $brandTextColor;
+          font-size: 1.3rem;
+          }
+          h5 {
+          display: inline;
+          color: $lightTextColor;
+          text-transform: capitalize;
+          margin-left: 0.3rem;
+          }
+          p {
+          margin-top: 1rem;
+          font-size: .8rem;
+          color: $secondaryTextColor;
+          }
+      }
+      a {
+          @include inactiveElementBrandColor;
+          color: $lightTextColor;
 
-        &:hover {
-        @include activeElementBrandColor;
-        }
-    }
-    .side-imgs{
-        img{
-            width: 115%;
-            height: 100%;
-            object-fit: cover;
-        }
-    }
-    .right-column {
-        img {
-        position: absolute;
-        width: 7rem;
-        height: 3rem;
-        object-fit: cover;
-        transform: translate(-50%, -50%);
-        left: 50%;
-        opacity: 0.3;
-        }
-        img:nth-child(1) {
-        top: -3px;
-        }
-        img:nth-child(2) {
-        bottom: -2.8rem;
-        }
-    }
+          &:hover {
+          @include activeElementBrandColor;
+          }
+      }
+      .side-imgs{
+          img{
+              width: 115%;
+              height: 100%;
+              object-fit: cover;
+          }
+      }
+      .right-column {
+          img {
+          position: absolute;
+          width: 7rem;
+          height: 3rem;
+          object-fit: cover;
+          transform: translate(-50%, -50%);
+          left: 50%;
+          opacity: 0.3;
+          }
+          img:nth-child(1) {
+          top: -3px;
+          }
+          img:nth-child(2) {
+          bottom: -2.8rem;
+          }
+      }
     }
 </style>
