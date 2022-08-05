@@ -1,6 +1,6 @@
 <template>
-  <div class="col-3 p-4 services-card rounded">
-    <div>
+  <div class="col-4 p-3">
+    <div class="services-card rounded p-4">
       <div class="d-flex justify-content-between">
         <i :class="iconPath(cardInfos)"></i>
         <a :href="cardInfos.url" @click.prevent>
