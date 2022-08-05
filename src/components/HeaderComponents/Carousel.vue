@@ -5,7 +5,7 @@
         @mouseover="heroAutoPlayStop()" @mouseleave="heroAutoplayStart()"
         v-for="(infos, index) in carouselElements" :key="index" 
         v-show="currentActive === index">
-          <div class="title display-1 fw-bold mb-4">
+          <div class="title display-2 fw-bold mb-4">
             <span>
               {{ splitFirstTitleWord(infos.title)}}
             </span>
@@ -13,7 +13,7 @@
               {{ splitSecondTitleWord(infos.title) }}
             </span>
           </div>
-            <div class="decription fs-4 mb-4">
+            <div class="description mb-4">
               {{ infos.description }}
           </div>
           <ul class="list-reset">
@@ -139,7 +139,6 @@ export default {
             background-size: 200%;
             background-repeat: no-repeat;
             padding: 10rem 0;
-            position: relative;
             display: flex;
             align-items: center;
             justify-content: center;          
@@ -151,8 +150,10 @@ export default {
                 }
             }
 
-            .decription{
-                color: darkgray;
+            .description{
+              margin: 0 auto;
+              width: 60%;
+              height: 5rem;
             }
 
             ul li a{
