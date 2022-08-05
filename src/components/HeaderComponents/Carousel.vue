@@ -152,6 +152,8 @@ export default {
 
             .description{
               margin: 0 auto;
+              display: flex;
+              align-items: center;
               width: 60%;
               height: 5rem;
             }
