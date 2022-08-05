@@ -1,5 +1,5 @@
 <template>
-  <section id="services" class="container-fluid">
+  <section id="services">
     <div class="container">
       <div class="row col-10 offset-1">
 

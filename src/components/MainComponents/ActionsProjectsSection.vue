@@ -18,7 +18,7 @@
                     </nav>
                 </div>
 
-                <ProjectsCards :projectsInfos="projectsInfos"/>
+                <ProjectsCards v-for="(projCard, index) in projectsInfos" :key="index" :card="projCard"/>
 
             </div>
         </div>

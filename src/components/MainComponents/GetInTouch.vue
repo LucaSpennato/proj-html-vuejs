@@ -1,7 +1,7 @@
 <template>
   <section id="get-touch">
-    <div class="container flex-center">
-        <div class="row col-10">
+    <div class="container">
+        <div class="row col-10 offset-1">
                 <div class="col-7 infos">
                     <SectionsHeadings :info="titleInfo" />
                     <div class="input-group">

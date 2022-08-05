@@ -1,5 +1,5 @@
 <template>
-  <section id="technologies" class="">
+  <section id="technologies">
         <div class="container row justify-content-center gap-5 m-auto">
             <div class="col-1" v-for="(tech, index) in technologies" :key="index">
                 <img :src="imgPath(tech)" :alt="imgPath(tech) + 'th logo'">

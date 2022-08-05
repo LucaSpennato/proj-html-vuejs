@@ -61,7 +61,6 @@ export default {
       titleInfo: {
                 topSubtitle: "about the network",
                 title: "the company",
-                // brandTitle: "the",
                 description: 'For 12 years we have been providing audit and warranty, financial advice, risk advice, taxes and related services to select clients.',
                 typeOne: false,
                 typeTwo: true,

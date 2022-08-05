@@ -1,7 +1,6 @@
 <template>
-  <div class="col-12">
-            <div class="card-projects"
-                v-for="(card, index) in projectsInfos" :key="index">
+    <div class="col-4 mb-4">
+        <div id="card-projects">
             <img class="img-fluid rounded" 
                 :src="imgPath(card)" 
                 :alt="imgPath(card) + 'project image'">
@@ -14,7 +13,7 @@
 export default {
     name: 'ProjectsCards',
     props:{
-        projectsInfos: Array,
+        card: Object,
     },
     methods:{
         imgPath: function(object){
@@ -26,10 +25,7 @@ export default {
 
 <style lang="scss">
     @import '../../scss/style.scss';
-    .card-projects{
-            display: inline-block;
-            width: calc((100% / 3) - 1.6rem);
-            margin: .8rem;
+    #card-projects{
             position: relative;
             transition: transform 200ms linear;
 
