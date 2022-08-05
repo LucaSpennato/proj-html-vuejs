@@ -7,10 +7,10 @@
         v-show="currentActive === index">
           <div class="title display-2 fw-bold mb-4">
             <span>
-              {{ splitFirstTitleWord(infos.title)}}
+              {{ splitTitleWord(infos.title, 0)}}
             </span>
             <span>
-              {{ splitSecondTitleWord(infos.title) }}
+              {{ splitTitleWord(infos.title, 1) }}
             </span>
           </div>
             <div class="description mb-4">
@@ -83,14 +83,10 @@ export default {
         ]
       }
     },
-        methods: {
-      splitFirstTitleWord(element){
+      methods:{
+      splitTitleWord(element, wordIndex){
         let word = element.split(" ");
-        return word[0]
-      },
-      splitSecondTitleWord(element){
-        let word = element.split(" ");
-        return word[1]
+        return word[wordIndex]
       },
 
       nextSlide: function(){
