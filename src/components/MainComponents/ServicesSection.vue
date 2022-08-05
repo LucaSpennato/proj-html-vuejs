@@ -14,7 +14,9 @@
             href="#">see all</a>
         </div>
       </div>
-        <ServicesCards :cardsInfo="servicesInfos"/>
+      <div class="row gap-3 justify-content-center mt-3">
+        <ServicesCards v-for="(info, index) in servicesInfos" :key="index" :cardInfos="info"/>
+      </div>
     </div>
   </section>
 </template>
