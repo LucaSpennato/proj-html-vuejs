@@ -1,7 +1,7 @@
 <template>
     <section id="headTopSection">
         <div class="container flex-center p-3">
-            <div class="row container-medium flex-between">
+            <div class="row flex-between">
                 <div class="col-12">
                     <ul class="list-reset">
                        <li v-for="(info, index) in  companySocialInfo" :key="index">
@@ -84,11 +84,12 @@ export default {
 
             li{
                 padding: 0 .6rem;
-                font-size: .9rem;
+                font-size: .8rem;
             }
 
             li:first-child{
                 flex-grow: 1;
+                margin-right: 8rem;
                 text-transform: capitalize;
             }
             li a{
