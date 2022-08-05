@@ -1,7 +1,7 @@
 <template>
   <section id="footer-top">
     <div class="container">
-        <div class="row col-10 justify-content-between m-auto">
+        <div class="row col-10 justify-content-around m-auto">
             <div class="col-3">
                 <img class="w-50" :src="require('../../assets/logos/logo.png')" alt="brand-logo">
                 <ul class="contact p-0">

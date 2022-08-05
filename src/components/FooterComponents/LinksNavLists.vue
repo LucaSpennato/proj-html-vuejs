@@ -1,11 +1,13 @@
-<template>       
-    <ul id="nav-links" class="rounded">
-        <li><h5>{{linksTitle}}</h5></li>
-        <li v-for="(link, index) in links" :key="index">
-            <span><i class="bi bi-chevron-right"></i></span>
-            <a :href="link.url" @click.prevent>{{ link.text }}</a>
-        </li>
-    </ul>
+<template>
+    <div class="col-3 py-2">
+        <ul id="nav-links" class="rounded p-4">
+            <li><h5>{{linksTitle}}</h5></li>
+            <li v-for="(link, index) in links" :key="index">
+                <span><i class="bi bi-chevron-right"></i></span>
+                <a :href="link.url" @click.prevent>{{ link.text }}</a>
+            </li>
+        </ul>
+    </div>
 </template>
 
 <script>
@@ -23,8 +25,6 @@ export default {
     #nav-links{
         list-style: none;
         background-color: $secodaryDarkBrandBg;
-        padding: 1.5rem;
-        width: calc((100% / 4) - 2rem);
 
         li{
             color: $lightTextColor;
