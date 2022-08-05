@@ -6,7 +6,7 @@
                         <img class="w-75" :src="require('../../assets/logos/logo.png')" alt="">
                     </div>
                     <div class="col-8 text-end">
-                        <ul class="list-reset" v-for="(link, index) in navLinks" :key="index">
+                        <ul class="list-reset-inline" v-for="(link, index) in navLinks" :key="index">
                             <li class="mx-1">
                                 <a @click.prevent="navClick(index)" 
                                 class="btn p-2" 

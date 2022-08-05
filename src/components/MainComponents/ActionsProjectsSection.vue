@@ -7,7 +7,7 @@
 
                 <div class="col-12 mb-5">
                     <nav>
-                        <ul class="list-reset" v-for="(link, index) in navLinks" :key="index">
+                        <ul class="list-reset-inline" v-for="(link, index) in navLinks" :key="index">
                             <li class="mx-1">
                                 <a @click.prevent="navClick(index)" 
                                 class="btn p-2" 
