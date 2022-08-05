@@ -14,7 +14,7 @@
 }
 
 .list-reset-inline{
-    @include reset-list-ul;
+    @include reset-list-ul-inline;
     li{
         display: inline;
         a{

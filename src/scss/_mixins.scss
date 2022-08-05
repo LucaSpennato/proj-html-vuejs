@@ -1,6 +1,6 @@
 @import './variables.scss';
 
-@mixin reset-list-ul{
+@mixin reset-list-ul-inline{
     list-style: none;
     display: inline;
     margin: 0;
