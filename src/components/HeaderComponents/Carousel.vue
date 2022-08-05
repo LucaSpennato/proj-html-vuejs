@@ -39,46 +39,6 @@
 <script>
 export default {
     name: 'Carousel',
-        methods: {
-      splitFirstTitleWord(element){
-        let word = element.split(" ");
-        return word[0]
-      },
-      splitSecondTitleWord(element){
-        let word = element.split(" ");
-        return word[1]
-      },
-
-      nextSlide: function(){
-        if(this.currentActive === this.carouselElements.length -1){
-              this.currentActive = 0;
-            }else{
-              this.currentActive++;
-            }
-      },
-
-      heroAutoplayStart: function(){
-        this.isHeroOn = setInterval(() => {
-            this.nextSlide();
-          },2000)
-      },
-
-      heroAutoPlayStop: function(){
-        clearInterval(this.isHeroOn);
-        this.isHeroOn = null;
-      },
-
-      changeOnThumbClick: function(index){
-        this.currentActive = index;
-        this.heroAutoPlayStop();
-        setTimeout(() => {
-          this.heroAutoplayStart();
-        }, 5000);
-      },
-    },
-    created(){
-      this.heroAutoplayStart();
-    },
     data: function(){
       return{
         currentActive: 1,
@@ -122,7 +82,48 @@ export default {
           },
         ]
       }
-    }
+    },
+        methods: {
+      splitFirstTitleWord(element){
+        let word = element.split(" ");
+        return word[0]
+      },
+      splitSecondTitleWord(element){
+        let word = element.split(" ");
+        return word[1]
+      },
+
+      nextSlide: function(){
+        if(this.currentActive === this.carouselElements.length -1){
+              this.currentActive = 0;
+            }else{
+              this.currentActive++;
+            }
+      },
+
+      heroAutoplayStart: function(){
+        this.isHeroOn = setInterval(() => {
+            this.nextSlide();
+          },2000)
+      },
+
+      heroAutoPlayStop: function(){
+        clearInterval(this.isHeroOn);
+        this.isHeroOn = null;
+      },
+
+      changeOnThumbClick: function(index){
+        this.currentActive = index;
+        this.heroAutoPlayStop();
+        setTimeout(() => {
+          this.heroAutoPlayStop();
+          this.heroAutoplayStart();
+        }, 5000);
+      },
+    },
+    created(){
+      this.heroAutoplayStart();
+    },
 }
 </script>
 
