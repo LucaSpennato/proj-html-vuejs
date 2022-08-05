@@ -16,7 +16,7 @@
             <div class="description mb-4">
               {{ infos.description }}
           </div>
-          <ul class="list-reset">
+          <ul class="list-reset-inline">
             <li>
               <a class="btn" :href="infos.linkGetInTouch.url">{{ infos.linkGetInTouch.text }}</a>
             </li>

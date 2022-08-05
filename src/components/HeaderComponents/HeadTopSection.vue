@@ -3,7 +3,7 @@
         <div class="container flex-center p-3">
             <div class="row flex-between">
                 <div class="col-12">
-                    <ul class="list-reset">
+                    <ul class="list-reset-inline">
                        <li v-for="(info, index) in  companySocialInfo" :key="index">
                             <a  @click.prevent 
                                 :href="info.url">

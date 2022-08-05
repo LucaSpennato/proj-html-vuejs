@@ -3,7 +3,7 @@
             <div class="container">
                 <div class="row col-10 offset-2">
                     <div class="col-2 flex-center">
-                        <img class="w-75" :src="require('../../assets/logos/logo.png')" alt="">
+                        <img class="w-75" :src="require('../../assets/logos/logo.png')" alt="brand-logo">
                     </div>
                     <div class="col-8 text-end">
                         <ul class="list-reset-inline" v-for="(link, index) in navLinks" :key="index">
@@ -79,6 +79,10 @@ export default {
         height: 3rem;
         ul li{
             text-transform: uppercase;
+            a.btn{
+                font-size: .9rem;
+                font-weight: 500;
+            }
             a:hover{
                 @include activeElementBrandColor;
             }
