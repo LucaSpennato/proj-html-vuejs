@@ -68,8 +68,7 @@ export default {
         return{
             titleInfo: {
                 topSubtitle: "send a message",
-                title: "get in",
-                brandTitle: "touch",
+                title: "get in touch",
                 description: 'We will responde to your message as soon as possible',
                 typeOne: true,
                 typeTwo: false,

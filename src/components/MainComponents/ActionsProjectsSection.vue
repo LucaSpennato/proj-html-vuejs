@@ -48,8 +48,7 @@ export default {
         return{
             titleInfo:{
                 topSubtitle: 'we do more for everyone',
-                title: 'actions &',
-                brandTitle: 'projects',
+                title: 'actions & projects',
                 description: false,
                 typeOne: true,
                 typeTwo: false,

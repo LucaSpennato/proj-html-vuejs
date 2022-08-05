@@ -33,8 +33,7 @@ export default {
     return {
       titleInfo: {
             topSubtitle: "our business area",
-            title: "exellence in",
-            brandTitle: "services",
+            title: "exellence in services",
             description: 'We are leaders in providing consultancy services with a set of cutting-edge technologies ans a team of experienced and renowned professionals. These are some options that you can hire',
             typeOne: true,
             typeTwo: false,

@@ -4,16 +4,16 @@
             {{ info.topSubtitle }}
         </h6>
         <h1 class="fw-bold py-4" v-if="info.typeOne">
-            {{ info.title }}
+            {{ splitFirstTitleWord(info.title) }}
             <span class="company-styled-word">
-                {{ info.brandTitle }}
+                {{ splitLastTitleWord(info.title) }}
             </span>
         </h1>
         <h1 v-if="info.typeTwo" class="text-light fw-bold py-4">
             <span class="company-styled-word-bg me-2">
-                {{ info.brandTitle }}
+                {{ splitFirstTitleWord(info.title) }}
             </span>
-            {{ info.title }}
+            {{ splitLastTitleWord(info.title) }}
         </h1>
         <p v-if="info.description">
             {{ info.description }}
@@ -28,9 +28,24 @@ export default {
         info: Object,
     },
     methods:{
-        log(element){
-            console.log(element)
+        splitLastTitleWord(string){
+        let word = string.split(" ");
+        if(word.length === 3 && this.info.typeTwo === true){
+            let words = word[word.length - 2] + ' ' + word[word.length - 1];
+            return words;
+        }else{
+            return word[word.length - 1];
         }
+      },
+        splitFirstTitleWord(string){
+        let word = string.split(" ");
+        if(word.length === 3 && this.info.typeOne === true){
+            let words = word[0] + ' ' + word[1];
+            return words;
+        }else{
+            return word[0];
+        }
+      },
     }
 }
 </script>

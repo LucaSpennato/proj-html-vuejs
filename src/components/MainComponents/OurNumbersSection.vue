@@ -32,8 +32,7 @@ export default {
        return{
             titleInfo: {
                 topSubtitle: "what are we doing",
-                title: "in numbers",
-                brandTitle: "results",
+                title: "results in numbers",
                 description: false,
                 typeOne: false,
                 typeTwo: true,

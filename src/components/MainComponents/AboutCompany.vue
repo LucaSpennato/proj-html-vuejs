@@ -60,8 +60,8 @@ export default {
     return {
       titleInfo: {
                 topSubtitle: "about the network",
-                title: "company",
-                brandTitle: "the",
+                title: "the company",
+                // brandTitle: "the",
                 description: 'For 12 years we have been providing audit and warranty, financial advice, risk advice, taxes and related services to select clients.',
                 typeOne: false,
                 typeTwo: true,
